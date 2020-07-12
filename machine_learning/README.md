@@ -1,5 +1,11 @@
 # 机器学习
-## 
+
+## 引用资源
+- [ML基础总结](https://github.com/lionel-sun/RS_Practice/blob/master/AI算法岗位面试资料整理/README.md)
+
+- [别人总结的一些ML问题](https://github.com/wangyuGithub01/Machine_Learning_Resources)
+
+- [RS总结](https://github.com/lionel-sun/RS_Practice/blob/master/README.md)
 
 ## GBDT，XGboost，LightGBM，Catboost,NGboost
 
@@ -12,10 +18,18 @@
 
 ## 项目相关
 
+项目收获？ 为啥用某个技术？相关技术原理，和别的比优势？使用什么参数，怎么调参？涉及简单的公式，最后成绩如何？如何优化？
+
 ### 天猫复购
+
+- [地址](https://github.com/lionel-sun/Tmall_Repeat_Buyers)
 
 ### 电影数据集关联规则挖掘
 
 ### Avazu CTR广告点击预测
 
+- [地址](https://github.com/lionel-sun/Avazu_CTR_Prediction)
+
 ### netflix电影评分预测
+
+- [地址](https://github.com/lionel-sun/Netflix)
