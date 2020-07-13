@@ -121,6 +121,23 @@ def maxDepth(self, root: TreeNode) -> int:
 
     return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
 ```
+非递归
+```python
+def maxDepth(self, root: TreeNode) -> int:
+    depth = 0
+    if not root: return depth
+
+    stack = [root]
+    while stack:
+        depth += 1
+        for i in range(len(stack)):
+            tmp = stack.pop(0)
+            if tmp.left:
+                stack.append(tmp.left)
+            if tmp.right:
+                stack.append(tmp.right)
+    return depth
+```
 ## 二叉树的递归套路
 
 递归向他的子书要信息，递归返回的就是这些信息。先列出可能性，然后列出递归需要返回的信息。递归要求左和右是一样的，返回值是一样的。
