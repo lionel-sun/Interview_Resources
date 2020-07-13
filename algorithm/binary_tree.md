@@ -121,3 +121,31 @@ def maxDepth(self, root: TreeNode) -> int:
 
     return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
 ```
+## 二叉树的递归套路
+
+递归向他的子书要信息，递归返回的就是这些信息。先列出可能性，然后列出递归需要返回的信息。递归要求左和右是一样的，返回值是一样的。
+
+- [验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
+递归套路：返回三个信息：是否是BST，最大值，最小值
+```python
+def isValidBST(self, root: TreeNode) -> bool:
+    if not root: return True
+
+    def process(node):
+        isBST = True
+        if node.left:
+            l_isBST, l_max, l_min = process(node.left)
+            isBST = node.val > l_max and isBST
+        else:
+            l_isBST, l_min = True, node.val
+        if node.right:
+            r_isBST, r_max, r_min = process(node.right)
+            isBST = node.val < r_min and isBST
+        else:
+            r_isBST, r_max = True, node.val
+        return isBST and l_isBST and r_isBST, r_max, l_min
+
+    root_info = process(root)
+
+    return root_info[0]
+```
