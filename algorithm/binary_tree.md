@@ -166,3 +166,95 @@ def isValidBST(self, root: TreeNode) -> bool:
 
     return root_info[0]
 ```
+非递归，迭代:从顶点开始判断，依次判断上边界，下边界还有当前值和左右子树当前值的大小，可以提前终止。
+```python
+def isValidBST(self, root: TreeNode) -> bool:
+    if not root: return True
+    stack = [[root, float('-inf'), float('inf')]]
+    while stack:
+        node, low, up = stack.pop()
+        if node.left:
+            if node.left.val >= node.val or node.left.val <= low:
+                return False
+            stack.append([node.left, low, node.val])
+        if node.right:
+            if node.right.val <= node.val or node.right.val >= up:
+                return False
+            stack.append([node.right, node.val, up])
+    return True
+```
+- [平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)
+递归套路，子树返回两个信息：1，是否是平衡二叉树。2，子树的深度（可以优化）
+```python
+def isBalanced(self, root: TreeNode) -> bool:
+    if not root: return True
+
+    def process(root):
+        if not root: return True, 0
+        l_isValid, l_depth = process(root.left)
+        r_isValid, r_depth = process(root.right)
+        return abs(r_depth-l_depth)<=1 and l_isValid and r_isValid, max(l_depth, r_depth)+1
+
+    return process(root)[0]
+```
+- [二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/)
+递归套路，返回最大值
+```python
+def maxPathSum(self, root: TreeNode) -> int:
+    maxsum = float('-inf')
+
+    def process(root):
+        if not root: return 0
+        l_max = process(root.left)
+        r_max = process(root.right)
+        nonlocal maxsum
+        maxsum = max(maxsum, l_max+r_max+root.val)
+        return max(0,max(l_max, r_max)+root.val)
+    process(root)
+    return maxsum
+```
+- [二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+子树分别返回是否找到q或者p，找不到返回空，当左右子树分别发现qp时候就返回当前节点就是最低公共祖先
+```python
+def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    if not root: return None
+    if root == p or root == q:
+        return root
+    left = self.lowestCommonAncestor(root.left, p, q)
+    right = self.lowestCommonAncestor(root.right, p, q)
+    if left and right:
+        return root
+    elif left:
+        return left
+    elif right:
+        return right
+    else:
+        return None
+```
+## BFS（Breath First Search）应用
+- [二叉树的锯齿形层次遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/)
+```python
+def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
+    if not root: return []
+
+    stack, res, start_left = [root], [], True
+    while stack:
+        level = []
+        for i in range(len(stack)):
+            if start_left:
+                tmp = stack.pop(0)
+                if tmp.left:
+                    stack.append(tmp.left)
+                if tmp.right:
+                    stack.append(tmp.right)
+            else:
+                tmp = stack.pop()
+                if tmp.right:
+                    stack.insert(0, tmp.right)
+                if tmp.left:
+                    stack.insert(0, tmp.left)
+            level.append(tmp.val)
+        start_left = not start_left
+        res.append(level)
+    return res
+```
