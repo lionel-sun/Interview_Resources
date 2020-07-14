@@ -92,6 +92,11 @@ def postorderTraversal(self, root: TreeNode) -> List[int]:
 ```
 
 ## [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
+
+
+- [二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/) 
+
+下面的代码将res的append改成从左侧添加，insert(0, level)
 ```python
 def levelOrder(self, root: TreeNode) -> List[List[int]]:
     if not root: return []
@@ -258,3 +263,33 @@ def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         res.append(level)
     return res
 ```
+## [二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/)
+
+思路：如果只是为了完成任务则找到最后一个叶子节点满足插入条件即可。但此题深挖可以涉及到如何插入并维持平衡二叉搜索树的问题，并不适合初学者。
+```python
+def insertIntoBST(self, root: TreeNode, val: int) -> TreeNode:
+    if not root: return TreeNode(val)
+    node = root
+    while True:
+        if val > node.val:
+            if not node.right:
+                node.right = TreeNode(val)
+                return root
+            else:
+                node = node.right
+        else:
+            if not node.left:
+                node.left = TreeNode(val)
+                return root
+            else:
+                node = node.left
+```
+
+## [二叉树的完全性检验](https://leetcode-cn.com/problems/check-completeness-of-a-binary-tree/)
+
+## [二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
+
+## [满二叉树]()
+## [新型二叉树后继]()
+## [折纸问题]()
+
