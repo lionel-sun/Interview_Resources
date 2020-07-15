@@ -96,7 +96,7 @@ def postorderTraversal(self, root: TreeNode) -> List[int]:
 
 - [二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/) 
 
-下面的代码将res的append改成从左侧添加，insert(0, level)
+> 下面的代码将res的append改成从左侧添加，insert(0, level)
 ```python
 def levelOrder(self, root: TreeNode) -> List[List[int]]:
     if not root: return []
@@ -286,10 +286,110 @@ def insertIntoBST(self, root: TreeNode, val: int) -> TreeNode:
 ```
 
 ## [二叉树的完全性检验](https://leetcode-cn.com/problems/check-completeness-of-a-binary-tree/)
+两个条件判断：1，之前出现过叶子节点，但左右子树还有值。2，右子树有值，左没有。使用队列先进先出
+
+```python
+def isCompleteTree(self, root: TreeNode) -> bool:
+	if not root: return True
+	stack, leaf = [root], False
+	while stack:
+		node = stack.pop(0)
+		if leaf and not (not node.left and not node.right):
+			return False
+		elif not node.left and node.right:
+			return False
+		if node.left:
+			stack.append(node.left)
+		if node.right:
+			stack.append(node.right)
+		if not node.left or not node.right:
+			leaf = True
+	return True
+```
 
 ## [二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
+递归套路，深度优先DFS
+```python
+def serialize(self, root):
+	def dfs(node):
+		if node:
+			vals.append(str(node.val))
+			dfs(node.left)
+			dfs(node.right)
+		else:
+			vals.append("null")
+
+	vals = []
+	dfs(root)
+	return ",".join(vals)
+
+def deserialize(self, data):
+	def dfs(vals):
+		v = vals.pop(0)
+		if v == "null":
+			return None
+		node = TreeNode(int(v))
+		node.left = dfs(vals)
+		node.right = dfs(vals)
+		return node
+	vals = data.split(",")
+	return dfs(vals)
+```
+非递归套路，BFS广度优先遍历
+```python
+def serialize(self, root):
+	res, queue = [], deque([root])
+	while queue:
+		node = queue.popleft()
+		if node:
+			queue.append(node.left)
+			queue.append(node.right)
+			res.append(str(node.val))
+		else:
+			res.append("null")
+	return ",".join(res)
+
+def deserialize(self, data):
+	vals = data.split(",")
+	idx = 0
+	val = vals[idx]
+	if val == "null":
+		return None
+	root = TreeNode(int(val))
+	queue = deque([root])
+	while queue:
+		node = queue.popleft()
+		idx += 1
+		val = vals[idx]
+		if val != "null":
+			node.left = TreeNode(int(val))
+			queue.append(node.left)
+		idx += 1
+		val = vals[idx]
+		if val != "null":
+			node.right = TreeNode(int(val))
+			queue.append(node.right)
+	return root
+```
 
 ## [满二叉树]()
-## [新型二叉树后继]()
-## [折纸问题]()
+判断节点左右子树是否都有，DFS深度递归。如果不存在就返回False
+## [二叉树后继和前驱](https://www.jianshu.com/p/ada8570401f6)
 
+## [折纸问题](https://www.nowcoder.com/questionTerminal/430180b66a7547e1963b69b1d0efbd3c)
+中序遍历，父节点左子树是下，右子树是上
+```python
+def foldPaper(self, n):
+	res = []
+	def midTraversal(n, postion):
+		if not n:
+			return
+		midTraversal(n - 1, "left")
+		if postion == "left":
+			res.append("down")
+		else:
+			res.append("up")
+		midTraversal(n - 1, "right")
+	midTraversal(n,"left")
+	return res
+```

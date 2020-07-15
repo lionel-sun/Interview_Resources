@@ -18,4 +18,6 @@ print(datal)
 sys.stdin.readline().strip()
 ```
 
-##  [¶þ²æÊ÷](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_tree.md)
+## [¶þ²æÊ÷](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_tree.md)
+
+## [Á´±í](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/linked_list.md)
