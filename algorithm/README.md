@@ -23,3 +23,7 @@ sys.stdin.readline().strip()
 ## [链表](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/linked_list.md)
 
 ## [排序算法](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/sort.md)
+
+## [二分法搜索](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_search.md)
+
+## [二进制](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_op.md)
