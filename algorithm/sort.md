@@ -86,12 +86,61 @@ def mergesort(arr):
 ## [堆排序]()
 
 ```python
+def heapify(arr, n, i):
+    largest = i
+    l = 2 * i + 1  # left = 2*i + 1
+    r = 2 * i + 2  # right = 2*i + 2
 
+    if l < n and arr[i] < arr[l]:
+        largest = l
+
+    if r < n and arr[largest] < arr[r]:
+        largest = r
+
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]  # 交换
+
+        heapify(arr, n, largest)
+
+
+def heapSort(arr):
+    n = len(arr)
+    # Build a maxheap. 从第一个非叶子节点开始
+    for i in range(n//2, -1, -1):
+        heapify(arr, n, i)
+    # 一个个交换元素 将最大值放到最后，然后n-1做为堆排序
+    for i in range(n - 1, 0, -1):
+        arr[i], arr[0] = arr[0], arr[i]  # 交换
+        heapify(arr, i, 0)
 ```
 
 ## [快速排序]()
-
+随机选取一个数放在最后做分割，然后返回。
 ```python
+def partition(arr, low, high):
+    i = (low - 1)  # 最小元素索引
+    ran = random.randint(low,high)
+    arr[ran], arr[high] = arr[high], arr[ran]
+    pivot = arr[high]
+
+    for j in range(low, high):
+
+        # 当前元素小于或等于 pivot
+        if arr[j] <= pivot:
+            i = i + 1
+            arr[i], arr[j] = arr[j], arr[i]
+
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return (i + 1)
+
+
+# 快速排序函数
+def quickSort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+
+        quickSort(arr, low, pi - 1)
+        quickSort(arr, pi + 1, high)
 
 ```
 
