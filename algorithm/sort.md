@@ -6,12 +6,16 @@
 ## 测试排序主函数
 ```python
 arr = []
-for i in range(random.randint(1, 10)):
+for i in range(random.randint(10, 20)):
     arr.append(random.randint(-100, 100))
-print(arr)
-print("bubble sort: ", bubbleSort(arr))
-print("selection sort: ", selectionSort(arr))
-print("insertion sort: ", insertionSort(arr))
+listarr = arr.copy()
+print(listarr)
+print("   bubble sort: ", bubbleSort(listarr))
+listarr = arr.copy()
+# print(listarr)
+print("selection sort: ", selectionSort(listarr))
+listarr = arr.copy()
+print("insertion sort: ", insertionSort(listarr))
 ```
 ## [冒泡排序]()
 稳定
