@@ -15,3 +15,7 @@
 - [ML基础总结](https://github.com/lionel-sun/RS_Practice/blob/master/AI算法岗位面试资料整理/README.md)
 
 - [RS总结](https://github.com/lionel-sun/RS_Practice/blob/master/README.md)
+
+- [2021届校招算法岗知识点总结](https://zhuanlan.zhihu.com/p/107911095)
+
+- [一篇文章搞定GBDT、Xgboost和LightGBM的面试](https://zhuanlan.zhihu.com/p/148050748)
