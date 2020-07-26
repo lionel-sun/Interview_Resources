@@ -148,14 +148,30 @@ def quickSort(arr, low, high):
 
 ```
 
-## []()
+## [计数排序]()
+
+不基于比较的排序需要有确定范围不能太大。
 
 ```python
-
+def countingSort(arr, maxValue):
+    bucketLen = maxValue+1
+    bucket = [0]*bucketLen
+    sortedIndex =0
+    arrLen = len(arr)
+    for i in range(arrLen):
+        if not bucket[arr[i]]:
+            bucket[arr[i]]=0
+        bucket[arr[i]]+=1
+    for j in range(bucketLen):
+        while bucket[j]>0:
+            arr[sortedIndex] = j
+            sortedIndex+=1
+            bucket[j]-=1
+    return arr
 ```
 
-## []()
-
+## [基数排序](https://www.runoob.com/w3cnote/radix-sort.html)
+需要数字有固定范围不能太呆，先从最小位分别进入桶在出来到最大位，最后依次出来就是最终排序
 ```python
 
 ```
