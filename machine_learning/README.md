@@ -19,6 +19,7 @@
 ## 调整参数
 
 [Sklearn中Pipeline的使用](https://www.jianshu.com/p/9c2c8c8ef42d)
+[Python机器学习基础教程》六、算法链与管道](https://zhuanlan.zhihu.com/p/48247268)
 
 ## 项目相关
 
