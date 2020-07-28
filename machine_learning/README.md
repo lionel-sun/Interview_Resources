@@ -1,35 +1,39 @@
-# »úÆ÷Ñ§Ï°
+# æœºå™¨å­¦ä¹ 
 
-## ÒıÓÃ×ÊÔ´
-- [ML»ù´¡×Ü½á](https://github.com/lionel-sun/RS_Practice/blob/master/AIËã·¨¸ÚÎ»ÃæÊÔ×ÊÁÏÕûÀí/README.md)
+## å¼•ç”¨èµ„æº
+- [MLåŸºç¡€æ€»ç»“](https://github.com/lionel-sun/RS_Practice/blob/master/AIç®—æ³•å²—ä½é¢è¯•èµ„æ–™æ•´ç†/README.md)
 
-- [±ğÈË×Ü½áµÄÒ»Ğ©MLÎÊÌâ](https://github.com/wangyuGithub01/Machine_Learning_Resources)
+- [åˆ«äººæ€»ç»“çš„ä¸€äº›MLé—®é¢˜](https://github.com/wangyuGithub01/Machine_Learning_Resources)
 
-- [RS×Ü½á](https://github.com/lionel-sun/RS_Practice/blob/master/README.md)
+- [RSæ€»ç»“](https://github.com/lionel-sun/RS_Practice/blob/master/README.md)
 
-## GBDT£¬XGboost£¬LightGBM£¬Catboost,NGboost
+## GBDTï¼ŒXGboostï¼ŒLightGBMï¼ŒCatboost,NGboost
 
-[ÎªÊ²Ã´xgboost²»ÊÊºÏ¸ßÎ¬Ï¡ÊèÌØÕ÷](https://www.zhihu.com/question/267934807)
+[ä¸ºä»€ä¹ˆxgboostä¸é€‚åˆé«˜ç»´ç¨€ç–ç‰¹å¾](https://www.zhihu.com/question/267934807)
 
-[GBDT ÈçºÎ´¦Àí¸ßÎ¬¶ÈÏ¡ÊèÌØÕ÷£¿](https://www.zhihu.com/question/55925445)
+[GBDT å¦‚ä½•å¤„ç†é«˜ç»´åº¦ç¨€ç–ç‰¹å¾ï¼Ÿ](https://www.zhihu.com/question/55925445)
 
-Ê÷Ä£ĞÍ¿ÉÒÔÖ±½Ó´¦Àí·ÖÀàÌØÕ÷£¬²»ĞèÒª×öonehot¡£onehotºóµÄÌØÕ÷ÊÇ¸ß¶ÈÏ¡ÊèµÄ£¬Èç¹û¸ÕºÃÄ³Ò»¸öÖµµÄ½á¹ûÒ»ÖÂ¿ÉÄÜµ¼ÖÂ¹ıÄâºÏ¡£
-Ê÷Ä£ĞÍµÄÕıÔò³Í·£ÏîÊÇÕë¶ÔÉî¶ÈºÍÒ¶×Ó½ÚµãÊı£¬¶ÔÕâÖÖÇé¿öÏÂµÄ³Í·£Ïî¼«Ğ¡¡£
+æ ‘æ¨¡å‹å¯ä»¥ç›´æ¥å¤„ç†åˆ†ç±»ç‰¹å¾ï¼Œä¸éœ€è¦åšonehotã€‚onehotåçš„ç‰¹å¾æ˜¯é«˜åº¦ç¨€ç–çš„ï¼Œå¦‚æœåˆšå¥½æŸä¸€ä¸ªå€¼çš„ç»“æœä¸€è‡´å¯èƒ½å¯¼è‡´è¿‡æ‹Ÿåˆã€‚
+æ ‘æ¨¡å‹çš„æ­£åˆ™æƒ©ç½šé¡¹æ˜¯é’ˆå¯¹æ·±åº¦å’Œå¶å­èŠ‚ç‚¹æ•°ï¼Œå¯¹è¿™ç§æƒ…å†µä¸‹çš„æƒ©ç½šé¡¹æå°ã€‚
 
-## ÏîÄ¿Ïà¹Ø
+## è°ƒæ•´å‚æ•°
 
-ÏîÄ¿ÊÕ»ñ£¿ ÎªÉ¶ÓÃÄ³¸ö¼¼Êõ£¿Ïà¹Ø¼¼ÊõÔ­Àí£¬ºÍ±ğµÄ±ÈÓÅÊÆ£¿Ê¹ÓÃÊ²Ã´²ÎÊı£¬ÔõÃ´µ÷²Î£¿Éæ¼°¼òµ¥µÄ¹«Ê½£¬×îºó³É¼¨ÈçºÎ£¿ÈçºÎÓÅ»¯£¿
+[Sklearnä¸­Pipelineçš„ä½¿ç”¨](https://www.jianshu.com/p/9c2c8c8ef42d)
 
-### ÌìÃ¨¸´¹º
+## é¡¹ç›®ç›¸å…³
 
-- [µØÖ·](https://github.com/lionel-sun/Tmall_Repeat_Buyers)
+é¡¹ç›®æ”¶è·ï¼Ÿ ä¸ºå•¥ç”¨æŸä¸ªæŠ€æœ¯ï¼Ÿç›¸å…³æŠ€æœ¯åŸç†ï¼Œå’Œåˆ«çš„æ¯”ä¼˜åŠ¿ï¼Ÿä½¿ç”¨ä»€ä¹ˆå‚æ•°ï¼Œæ€ä¹ˆè°ƒå‚ï¼Ÿæ¶‰åŠç®€å•çš„å…¬å¼ï¼Œæœ€åæˆç»©å¦‚ä½•ï¼Ÿå¦‚ä½•ä¼˜åŒ–ï¼Ÿ
 
-### µçÓ°Êı¾İ¼¯¹ØÁª¹æÔòÍÚ¾ò
+### å¤©çŒ«å¤è´­
 
-### Avazu CTR¹ã¸æµã»÷Ô¤²â
+- [åœ°å€](https://github.com/lionel-sun/Tmall_Repeat_Buyers)
 
-- [µØÖ·](https://github.com/lionel-sun/Avazu_CTR_Prediction)
+### ç”µå½±æ•°æ®é›†å…³è”è§„åˆ™æŒ–æ˜
 
-### netflixµçÓ°ÆÀ·ÖÔ¤²â
+### Avazu CTRå¹¿å‘Šç‚¹å‡»é¢„æµ‹
 
-- [µØÖ·](https://github.com/lionel-sun/Netflix)
+- [åœ°å€](https://github.com/lionel-sun/Avazu_CTR_Prediction)
+
+### netflixç”µå½±è¯„åˆ†é¢„æµ‹
+
+- [åœ°å€](https://github.com/lionel-sun/Netflix)
