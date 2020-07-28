@@ -20,7 +20,7 @@
 
 - [一篇文章搞定GBDT、Xgboost和LightGBM的面试](https://zhuanlan.zhihu.com/p/148050748)
 
-## [大数据相关]()
+## [大数据相关](https://github.com/lionel-sun/Interview_Resources/tree/master/big_data)
 
 - [Mapreduce]()
 

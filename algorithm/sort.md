@@ -172,6 +172,8 @@ def countingSort(arr, maxValue):
 
 ## [基数排序](https://www.runoob.com/w3cnote/radix-sort.html)
 需要数字有固定范围不能太呆，先从最小位分别进入桶在出来到最大位，最后依次出来就是最终排序
+
+不能有负数
 ```python
 
 ```
