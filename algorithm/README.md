@@ -1,10 +1,10 @@
-# ±à³ÌÌâ»ã×Ü
+# ç¼–ç¨‹é¢˜æ±‡æ€»
 
-## [½üÆÚ¸ßÆµÌâÄ¿](https://github.com/afatcoder/LeetcodeTop)
+## [è¿‘æœŸé«˜é¢‘é¢˜ç›®](https://github.com/afatcoder/LeetcodeTop)
 
-## [python°æ±¾·ÖÀà»ã×Ü](https://github.com/dashidhy/algorithm-pattern-python)
+## [pythonç‰ˆæœ¬åˆ†ç±»æ±‡æ€»](https://github.com/dashidhy/algorithm-pattern-python)
 
-## Å£¿ÍÊäÈë´¦ÀíÄ£°æ
+## ç‰›å®¢è¾“å…¥å¤„ç†æ¨¡ç‰ˆ
 
 ```Python
 import sys
@@ -13,17 +13,19 @@ for i in sys.stdin:
     v = list(map(int, i.strip().split()))
     datal.append(v)
 print(datal)
-# NĞĞÊı¾İÓÃÉÏÃæÒ»´Î¶ÁÈë
-# ¹Ì¶¨ĞĞÊı¿ÉÒÔÓÃÏÂÃæ´¦Àí
+# Nè¡Œæ•°æ®ç”¨ä¸Šé¢ä¸€æ¬¡è¯»å…¥
+# å›ºå®šè¡Œæ•°å¯ä»¥ç”¨ä¸‹é¢å¤„ç†
 sys.stdin.readline().strip()
 ```
 
-## [¶ş²æÊ÷](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_tree.md)
+## [äºŒå‰æ ‘](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_tree.md)
 
-## [Á´±í](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/linked_list.md)
+## [é“¾è¡¨](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/linked_list.md)
 
-## [ÅÅĞòËã·¨](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/sort.md)
+## [æ’åºç®—æ³•](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/sort.md)
 
-## [¶ş·Ö·¨ËÑË÷](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_search.md)
+## [äºŒåˆ†æ³•æœç´¢](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_search.md)
 
-## [¶ş½øÖÆ](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_op.md)
+## [äºŒè¿›åˆ¶](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_op.md)
+
+## [ç¬”è¯•çœŸé¢˜å¤ç›˜](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/OJcollection.md)
