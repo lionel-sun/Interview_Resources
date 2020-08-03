@@ -419,7 +419,29 @@ public class Main {
 飞行旗，暴力解法列出所有情况就行了。
 
 ```python
+import sys
 
+k, n = list(map(int, sys.stdin.readline().strip().split()))
+l = list(map(int, sys.stdin.readline().strip().split()))
+j = 0
+if k == 0: print("paradox")
+else:
+    for i in range(n):
+        tmp = k - l[i]
+        if tmp < 0:
+            k = 0-tmp
+            j+=1
+            continue
+        if tmp == 0:
+            k=0
+            if i == n-1:
+                print(str(k)+" "+str(j))
+            elif i < n-1:
+                print("paradox")
+            break
+        k = tmp
+    if k != 0 :
+        print(str(k)+" "+str(j))
 ```
 
 ### 第二题
@@ -436,7 +458,48 @@ public class Main {
 输出
 1
 2
+import sys
+from collections import defaultdict
+# 上下左右前后对应索引位置：0,1,2,3,4,5
+counter = defaultdict(int)
+n = int(sys.stdin.readline().strip())
+for i in range(n):
+    nums = list(map(int, sys.stdin.readline().strip().split()))
+    for idx, val in enumerate(nums):
+        if val == 1:
+            if idx == 0:
+                break
+            elif idx == 1:
+                nums[0], nums[1], nums[4], nums[5] = nums[1], nums[0], nums[5], nums[4]
+            elif idx == 2:
+                nums[0], nums[1], nums[2], nums[3] = nums[2], nums[3], nums[1], nums[0]
+            elif idx == 3:
+                nums[0], nums[1], nums[2], nums[3] = nums[3], nums[2], nums[0], nums[1]
+            elif idx == 4:
+                nums[0], nums[1], nums[4], nums[5] = nums[4], nums[5], nums[1], nums[0]
+            elif idx == 5:
+                nums[0], nums[1], nums[4], nums[5] = nums[5], nums[4], nums[0], nums[1]
+            break
+    numf2 = nums[0]+1
+    if nums[1] == numf2:
+        numf2+=1
+    for idx, val in enumerate(nums):
+        if val == numf2:
+            if idx == 4:
+                break
+            elif idx == 2:
+                nums[2], nums[3], nums[4], nums[5] = nums[5], nums[4], nums[2], nums[3]
+            elif idx == 3:
+                nums[2], nums[3], nums[4], nums[5] = nums[4], nums[5], nums[3], nums[2]
+            elif idx == 5:
+                nums[2], nums[3], nums[4], nums[5] = nums[3], nums[2], nums[5], nums[4]
+    counter[tuple(nums)] +=1
+    print(nums)
 
+res = [x for i, x in counter.items()]
+res.sort(reverse=True)
+print(len(res))
+print(" ".join(str(x) for x in res))
 ```
 
 ### 第三题
@@ -447,9 +510,76 @@ public class Main {
 暴力枚举只能过50%后面超时。先按照热量，将早餐和晚餐进行排序。 然后单独判断午餐，找到符合要求的美味值后，后面剩余的都不需要遍历了，单独判断晚餐的情况同理。
 对于午餐和晚餐都选的情况，当找出复合要求的晚餐后，对于后续的遍历，就不需要遍历该晚餐之后的晚餐了。（这种方法可以AC）
 
-
-
 ```python
+测试用例：
+输入:  
+5 1 9
+9 1
+4 9
+3 1
+2 3
+6 5
+9 8 
+输出:4 （解释：只需要吃一顿中餐即可） 
+
+示例 2:
+输入: 
+1 1 0
+3 1
+2 1
+输出: 0（解释，一顿都不吃）
+
+示例 3:
+输入:
+3 3 10
+1 1
+2 5
+3 7
+2 4
+4 8
+6 9
+输出: 5
+
+示例 4:
+输入: 
+2 1 4
+3 1
+2 1
+1 2
+输出:
+-1(解释怎么都达不到美味值，输出-1) 
+
+import sys
+
+n, m, k = list(map(int, sys.stdin.readline().strip().split()))
+Alist, Blist = [],[]
+res = float('inf')
+for i in range(n):
+    Alist.append(list(map(int, sys.stdin.readline().strip().split())))
+for i in range(m):
+    Blist.append(list(map(int, sys.stdin.readline().strip().split())))
+Alist.sort(key=lambda x:x[0])
+Blist.sort(key=lambda x:x[0])
+
+if not k: print(0)
+else:
+    for i in Alist:
+        if i[1] >= k:
+            res = min(res, i[0])
+            break
+    for i in Blist:
+        if i[1] >= k:
+            res = min(res, i[0])
+            break
+    if res != float('inf'): print(res)
+    else:
+        for i in Alist:
+            for j in Blist:
+                if i[1]+j[1]>=k:
+                    res = min(res, i[0]+j[0])
+                    break
+        if res == float('inf'): print(-1)
+        else: print(res)
 ```
 
 ### 第四题
