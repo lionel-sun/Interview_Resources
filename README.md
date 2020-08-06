@@ -1,5 +1,7 @@
 # 面试复习准备材料
 
+目标岗位：数据研发
+
 ## [算法部分](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/README.md)
 
 - [近期高频题目](https://github.com/afatcoder/LeetcodeTop)

@@ -1,5 +1,7 @@
 # 机器学习
 
+目标：项目涉及内容，基本算法
+
 ## 引用资源
 - [ML基础总结](https://github.com/lionel-sun/RS_Practice/blob/master/AI算法岗位面试资料整理/README.md)
 
@@ -19,6 +21,7 @@
 ## 调整参数
 
 [Sklearn中Pipeline的使用](https://www.jianshu.com/p/9c2c8c8ef42d)
+
 [Python机器学习基础教程》六、算法链与管道](https://zhuanlan.zhihu.com/p/48247268)
 
 ## 项目相关
@@ -29,11 +32,7 @@
 
 - [地址](https://github.com/lionel-sun/Tmall_Repeat_Buyers)
 
-### 电影数据集关联规则挖掘
-
-### Avazu CTR广告点击预测
-
-- [地址](https://github.com/lionel-sun/Avazu_CTR_Prediction)
+### BBC食谱搜索引擎
 
 ### netflix电影评分预测
 
