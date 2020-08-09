@@ -1,6 +1,6 @@
 # 编程题汇总
 
-## [二叉树](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_tree.md)
+## [树](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_tree.md)
 
 ## [链表](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/linked_list.md)
 
@@ -9,6 +9,12 @@
 ## [二分法搜索](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_search.md)
 
 ## [二进制](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/binary_op.md)
+
+## [图](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/graph.md)
+
+## [动态规划](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/dp.md)
+
+## [回溯法](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/backtrack.md)
 
 ## [笔试真题复盘](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/OJcollection.md)
 

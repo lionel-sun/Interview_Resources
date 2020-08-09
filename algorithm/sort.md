@@ -178,26 +178,57 @@ def countingSort(arr, maxValue):
 
 ```
 
-## []()
+## [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
 
+用小顶堆，放K个进去，时间复杂度O(Nlogk)
 ```python
+import random 
+import heapq
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        size = len(nums)
+        if k > size:
+            raise Exception('程序出错')
+        
+        L = []
+        for i in range(k):
+            heapq.heappush(L, nums[i])
 
+        for i in range(k, size):
+            top = L[0]
+            if nums[i] > top:
+                heapq.heapreplace(L, nums[i])
+
+        return L[0]
 ```
 
-## []()
+用类似快排，O(N)
 
 ```python
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        k -=1
 
-```
+        def partition(left, right):
+            pivot_idx = random.randint(left,right)
+            pivot = nums[pivot_idx]
+            nums[pivot_idx], nums[right] = nums[right], nums[pivot_idx]
 
-## []()
+            partition_idx = left
+            for i in range(left,right):
+                if nums[i]>pivot:
+                    nums[partition_idx],nums[i]=nums[i],nums[partition_idx]
+                    partition_idx+=1
+            nums[partition_idx],nums[right]=nums[right],nums[partition_idx]
+            return partition_idx
 
-```python
-
-```
-
-## []()
-
-```python
-
+        left, right = 0, len(nums)-1
+        while True:
+            idx = partition(left,right)
+            if idx == k:
+                return nums[idx]
+            elif idx < k:
+                left = idx + 1
+            else :
+                right = idx - 1
 ```

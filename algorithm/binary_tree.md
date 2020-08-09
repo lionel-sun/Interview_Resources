@@ -1,4 +1,4 @@
-# 二叉树
+# 树
 
 ## [二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 递归
@@ -393,3 +393,7 @@ def foldPaper(self, n):
 	midTraversal(n,"left")
 	return res
 ```
+
+## 二叉搜索树
+
+## 前缀树

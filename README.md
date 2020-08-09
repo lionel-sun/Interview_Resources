@@ -23,7 +23,7 @@
 - 数据库
 - 工具（git，docker，微服务等）
 - 微服务的项目
-- 面试所有资料
+- [面试所有资料](https://github.com/CyC2018/CS-Notes)
 
 ## [ML](https://github.com/lionel-sun/Interview_Resources/tree/master/machine_learning)
 
@@ -37,3 +37,4 @@
 - MapReduce
 - Hive
 - Spark
+- 引用资源
