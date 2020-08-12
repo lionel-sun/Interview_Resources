@@ -14,7 +14,7 @@
 
 ## [动态规划](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/dp.md)
 
-## [回溯法](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/backtrack.md)
+## [回溯法（暴力递归）](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/backtrack.md)
 
 ## [笔试真题复盘](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/OJcollection.md)
 
