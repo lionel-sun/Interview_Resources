@@ -157,3 +157,5 @@ copy和deepcopy，如果有指针到子对象，浅只拷贝指针地址，深拷贝会生成新的指针地址（
 ### 基于微服务的自动防御相关内容
 
 ## [面试所有资料](https://github.com/CyC2018/CS-Notes)
+
+## [jvm相关，网络知识(TCP/IP,DNS)](https://www.nowcoder.com/discuss/392327?type=post&order=time&pos=&page=1&channel=1009&source_id=search_post)

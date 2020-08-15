@@ -109,3 +109,129 @@ def permuteUnique(self, nums: List[int]) -> List[List[int]]:
 	process(nums, [], res)
 	return res
 ```
+
+## [解码方法](https://leetcode-cn.com/problems/decode-ways/description/)
+
+回溯法，超时
+```python
+def numDecodings(self, s: str) -> int: 
+	def process(st, i):
+		res = 0
+		if i == len(st): return 1
+		if st[i] == '0': return 0
+		res += process(st, i+1)
+		if st[i] == '1' and i +1 <len(st):
+			res += process(st, i+2)
+		if st[i] == "2" and i +1 <len(st):
+			if st[i+1] in "0123456": res += process(st, i+2)
+		return res
+	return process(s, 0)
+```
+动态规划
+```python
+```
+
+## 背包问题
+
+0-1背包问题。有N个货物，values和weights两个数组代表价值和重量,bag表示背包容量。求最大价值
+
+```python
+def getMaxValue(v, w, bag):
+	def process(v, w, idx, alreadyw, bag):
+		if alreadyw > bag: return -1
+		if idx == len(w): return 0
+		
+		p1 = (v, w, idx+1, alreadyw, bag)
+		
+		p2next = (v, w, idx+1, alreadyw + w[idx], bag)
+		p2 = -1
+		if p2next != -1:
+			p2 = p2next + v[idx]
+		return max(p1, p2)
+```
+
+## [预测赢家](https://leetcode-cn.com/problems/predict-the-winner/)
+
+回溯法，超时
+```python
+def PredictTheWinner(self, nums: List[int]) -> bool:
+	def f(arr, l, r):
+		if l == r:
+			return arr[r]
+		return max(arr[r]+s(arr ,l, r-1), arr[l]+s(arr, l+1, r))
+	
+	def s(arr, l, r):
+		if l == r:
+			return 0
+		return min(f(arr, l+1, r), f(arr, l, r-1))
+	
+	p1 = f(nums, 0, len(nums)-1)
+	p2 = s(nums, 0, len(nums)-1)
+
+	return True if p1 >= p2 else False
+```
+
+动态规划
+```python
+
+```
+
+## [N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)
+
+无法用dp，只能回溯。常规方法，时间复杂度一样，但是常数时间高
+```python
+def totalNQueens(self, n: int) -> int:
+	def process(i, record, n):
+		if i == n: return 1
+		res = 0
+		for j in range(n):
+			if isValid(record, i, j):
+				record[i] = j;
+				res += process(i+1, record, n)
+		return res
+
+	def isValid(record, i, j):
+		for k in range(i):
+			if j == record[k] or abs(record[k]-j) == abs(k-i):
+				return False
+		return True
+
+	if n < 1: return 0
+	record = [None] * n
+	return process(0, record, n)
+```
+
+使用位运算，java限制32位(int)或者64位(long)，时间复杂度一样，但是常数时间极快
+```python
+def totalNQueens(self, n: int) -> int:
+	def process(limit, colLim, leftDiaLim, rightDiaLim):
+		if colLim == limit:
+			return 1
+		pos = limit & (~( colLim | leftDiaLim | rightDiaLim))
+		# pos是1的位置都是可以取的
+		res = 0
+		while pos != 0:
+			mostRgihtone = pos & (~pos + 1)
+			pos -= mostRgihtone
+			res += process(limit, colLim | mostRgihtone, 
+							(leftDiaLim | mostRgihtone) << 1,
+							(rightDiaLim | mostRgihtone) >> 1)
+		return res
+	limit = (1 << n) - 1
+	return process(limit, 0,0,0)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
