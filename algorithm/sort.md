@@ -18,7 +18,7 @@ listarr = arr.copy()
 print("insertion sort: ", insertionSort(listarr))
 ```
 ## [冒泡排序]()
-稳定
+稳定 时间复杂度O(n<sup>2</sup>) 空间复杂度O(1)
 ```python
 def bubbleSort(arr):
     for j in range(len(arr)):
@@ -32,7 +32,7 @@ def bubbleSort(arr):
 ```
 
 ## [选择排序]()
-不稳定
+不稳定 时间复杂度O(n<sup>2</sup>) 空间复杂度O(1)
 ```python
 def selectionSort(arr):
     for i in range(len(arr)):
@@ -45,7 +45,7 @@ def selectionSort(arr):
 ```
 
 ## [插入排序]()
-稳定
+稳定 时间复杂度O(n<sup>2</sup>) 空间复杂度O(1)
 ```python
 def insertionSort(arr):
     for i in range(1, len(arr)):
@@ -60,7 +60,7 @@ def insertionSort(arr):
 
 ## [归并排序]()
 > 递归时间复杂度的master公式
-直接分开到最低成，然后两两合并
+直接分开到最低成，然后两两合并。 稳定  时间复杂度O(N logN) 空间复杂度O(N)
 ```python
 def merge(A, B):
     C = []
@@ -88,7 +88,7 @@ def mergesort(arr):
 ```
 
 ## [堆排序]()
-
+不稳定  时间复杂度O(N logN) 空间复杂度O(1)
 ```python
 def heapify(arr, n, i):
     largest = i
@@ -119,7 +119,7 @@ def heapSort(arr):
 ```
 
 ## [快速排序]()
-随机选取一个数放在最后做分割，然后返回。
+随机选取一个数放在最后做分割，然后返回。 稳定  时间复杂度O(N logN) 递归调用栈需要的空间复杂度O(logN)
 ```python
 def partition(arr, low, high):
     i = (low - 1)  # 最小元素索引
