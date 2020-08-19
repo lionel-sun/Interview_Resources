@@ -16,6 +16,12 @@
 
 ## [回溯法（暴力递归）](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/backtrack.md)
 
+## [大数据题目](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/bigdata.md)
+
+## [并查集](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/union_find.md)
+
+## [KMP算法](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/KMP.md)
+
 ## [笔试真题复盘](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/OJcollection.md)
 
 ## [近期高频题目](https://github.com/afatcoder/LeetcodeTop)
