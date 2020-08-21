@@ -43,6 +43,31 @@ reduce两步：1，对map输出key value合并处理转换新的keyvalue。2，�
 
 ## Spark
 
+## SQL题
+
+### 直播统计
+
+1、统计每天每个直播间的访客数、每天最大访客数的直播间
+2、查找至少连续观看3天的用户ID 及出现直播间
+
+```sql
+
+select LiveID,count(UserID) as visitnum 
+FROM table
+Gourp By LiveID 
+Order By visitnum DESC(ASC)
+
+select max(visitnum) as maxvisit,LiveID 
+From previous table
+
+SELECT *
+from (select Date - ROW_NUMBER() OVER(ORDER BY DATE ASC) AS times,userid, liveid
+FROM table
+Group By userid, liveid) as T
+where times>3
+
+
+```
 
 ## 引用资源
 
