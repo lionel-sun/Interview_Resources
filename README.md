@@ -32,7 +32,7 @@
 - 项目相关
 - 引用资源
 
-## [大数据相关](https://github.com/lionel-sun/Interview_Resources/tree/master/big_data)
+## [数据研发](https://github.com/lionel-sun/Interview_Resources/tree/master/big_data)
 
 - MapReduce
 - Hive
