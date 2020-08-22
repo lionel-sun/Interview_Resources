@@ -27,18 +27,13 @@
 
 - [地址](https://github.com/lionel-sun/Tmall_Repeat_Buyers)
 
-
-
 ### BBC食谱搜索引擎
 
-
+### 设置文本向量的时候取的长度是多少。
 
 ### netflix电影评分预测
 
 - [地址](https://github.com/lionel-sun/Netflix)
-
-
-
 
 ## 引用资源
 - [ML基础总结](https://github.com/lionel-sun/RS_Practice/blob/master/AI算法岗位面试资料整理/README.md)

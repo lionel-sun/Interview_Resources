@@ -22,7 +22,7 @@
 
 ## [KMP算法](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/KMP.md)
 
-## [笔试真题复盘](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/OJcollection.md)
+## [笔真题复盘](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/OJcollection.md)
 
 ## [近期高频题目](https://github.com/afatcoder/LeetcodeTop)
 
