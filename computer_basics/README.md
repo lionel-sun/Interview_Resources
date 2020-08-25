@@ -1,7 +1,7 @@
 # 计算机基础知识
 ## ![操作系统](https://placehold.it/15/f03c15/000000?text=+)`操作系统`
 ## <font color=#008000>操作系统</font>
-
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `字节，M，G换算，如何读取数据到内存`
 ### 字节，M，G换算，如何读取数据到内存
 
 8bit = 1字节 1024字节bytes = 1KB 	1024KB = 1MB	1024MB = 1GB
