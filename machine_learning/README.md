@@ -60,7 +60,6 @@ DSIN将行为序列划分为session，30分钟作为节点切割一个session。
 NN模型创建用户行为序列，长度取500个（超过的去除，不足的补全）。使用了DEEPCTR的DIN和DSIN模型。
 
 
-
 - [地址](https://github.com/lionel-sun/Tmall_Repeat_Buyers)
 
 ### BBC食谱搜索引擎
