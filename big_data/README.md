@@ -116,13 +116,42 @@ mapjoin方法（同上）
 ## Hadoop
 > MR，HDFS等基本概念，面试常见题型
 
+### HDFS基本结构
+
+分布式文件系统HDFS是大数据的存储，block块默认最多可以存储128M
+
+HDFS集群包括，NameNode和DataNode以及Secondary Namenode。NameNode负责管理整个文件系统的元数据，以及每一个路径（文件）所对应的数据块信息。
+DataNode 负责管理用户的文件数据块，每一个数据块都可以在多个datanode上存储多个副本。
+Secondary NameNode用来监控HDFS状态的辅助后台程序，每隔一段时间获取HDFS元数据的快照。最主要作用是辅助namenode管理元数据信息
+
+### HDFS优缺点
+
+优点：1，高容错性。多个副本,切丢失一个后自动恢复。2，适合批处理，通过移动计算而不是移动数据，把数据位置暴露给计算框架。
+3，适合大数据处理，可以处理GB,TB,PB级数据，可以处理百万规模以上的文件数量和10K节点的规模。4，流式数据访问，一次写入，多次读取，不能修改，只能追加。一致性。
+5，可构建在廉价机器上
+
+缺点：1，不适合低延时数据访问；2，无法高效的对大量小文件进行存储。3，并发写入、文件随机修改，一个文件只能有一个写，不允许多个线程同时写。
+仅支持数据 append（追加），不支持文件的随机修改。
+
+### MR是什么
+
+是大数据的计算
+
+MapReduce流程：input->Splitting->Mapping->Shuffling->Reducing-> result
+
+Hadoop计算框架Shuffle处于map和reduce阶段之间。
+
 ### MR编程流程模型
 
-map两步：1，数据切分成key，value。2，自定义逻辑转换成新的key，value。
+map两步：1，设置inputFormat类，将我们的数据切分成key，value对，输入到第二步。
+2，自定义map逻辑，处理我们第一步的输入数据，然后转换成新的key，value对进行输出
 
-shuffle四步：3，按key分区，发送不懂reduce。4，不同分局按key排序。5，进行数据规约合并操作（可选）6，排序后分组，相同key放到同一个集合。
+shuffle四步：3，对输出的key，value对进行分区。相同key的数据发送到同一个reduce里面去，相同key合并，value形成一个集合。
+4，对不同分区的数据按照相同的key进行排序。5，对分组后的数据进行规约(combine操作)，降低数据的网络拷贝（可选步骤）
+6，排序后分组，相同key的value放到同一个集合。
 
-reduce两步：1，对map输出key value合并处理转换新的keyvalue。2，输出的值保存到文件中。
+reduce两步：1，对多个map的任务进行合并，排序，写reduce函数自己的逻辑，对输出key value合并处理转换新的key，value输出。
+2，设置outputformat将输出的key，value对数据进行保存到文件中
 
 ### wordcount讲解
 
@@ -131,8 +160,65 @@ reduce两步：1，对map输出key value合并处理转换新的keyvalue。2，�
 ## Hive
 > 基本概念，面试常见题型
 
+### 什么是和Hive
+
+Hive是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供类SQL查询功能。其本质是将SQL转换为MapReduce的任务进行运算，
+底层由HDFS来提供数据的存储，说白了hive可以理解为一个将SQL转换为MapReduce的任务的工具，甚至更进一步可以说hive就是一个MapReduce的客户端
+
+### 与数据库的区别
+
+Hive 具有 SQL 数据库的外表，但应用场景完全不同。Hive 只适合用来做海量离线数据统计分析，也就是数据仓库。Hive主要是批量操作，执行延迟高。
+
+### Hive的优缺点
+
+优点：1，操作接口采用类SQL语法，提供快速开发的能力（简单、容易上手）。
+2，避免了去写MapReduce，减少开发人员的学习成本。
+3，Hive支持用户自定义函数，用户可以根据自己的需求来实现自己的函数。
+
+缺点：1，Hive 的查询延迟很严重
+
 ## Spark
 > 基本概念，面试常见题型
+
+### Spark为什么比MR更快
+
+MapReduce通常需要将计算的中间结果写入磁盘，然后还要读取磁盘，从而导致了频繁的磁盘IO。
+Spark则不需要将计算的中间结果写入磁盘，这得益于Spark的RDD（弹性分布式数据集，很强大）和DAG（有向无环图），
+其中DAG记录了job的stage以及在job执行过程中父RDD和子RDD之间的依赖关系。中间结果能够以RDD的形式存放在内存中，且能够从DAG中恢复，大大减少了磁盘IO。
+
+MapReduce在Shuffle时需要花费大量时间进行排序，排序在MapReduce的Shuffle中似乎是不可避免的；
+Spark在Shuffle时则只有部分场景才需要排序，支持基于Hash的分布式聚合，更加省时；
+
+MapReduce采用了多进程模型，多进程模型的好处是便于细粒度控制每个任务占用的资源，但每次任务的启动都会消耗一定的启动时间。
+Spark则是通过复用线程池中的线程来减少启动、关闭task所需要的开销。
+
+### 处理spark oom
+
+大约有两个情况：1、map执行内存溢出.2、shuffle后内存溢出
+
+map执行中内存溢出代表了所有map类型的操作。包括：flatMap，filter，mapPatitions等。
+通过减少每个task的大小来减少Executor内存中的数量，具体做法是在调用map操作前先调用repartition方法，增大分区数来减少每个分区的大小，再传入map中进行操作。
+
+shuffle后内存溢出的shuffle操作包括join，reduceByKey，repartition等操作。
+shuffle内存溢出的情况可以说都是shuffle后，shuffle会产生数据倾斜，少数的key内存非常的大，它们都在同一个Executor中计算，导致运算量加大甚至会产生OOM。
+
+### spark的rdd特性
+
+弹性分布式数据集，是Spark中最基本的数据抽象，它代表一个不可变、可分区、里面的元素可并行计算的集合.
+Dataset: 就是一个集合，存储很多数据.
+Distributed：它内部的元素进行了分布式存储，方便于后期进行分布式计算.
+Resilient： 表示弹性，rdd的数据是可以保存在内存或者是磁盘中.
+
+五大属性：1，一个分区（Partition）列表，数据集的基本组成单位。一个rdd有很多分区（包含了该rdd的部分数据）
+spark中任务是以task线程的方式运行， 一个分区就对应一个task线程。
+2，一个计算每个分区的函数。Spark中RDD的计算是以分区为单位的，每个RDD都会实现compute计算函数以达到这个目的.
+3，一个rdd会依赖于其他多个rdd。这里就涉及到rdd与rdd之间的依赖关系，spark任务的容错机制就是根据这个特性（血统）而来。
+4，一个Partitioner，即RDD的分区函数（可选项）
+5，一个列表，存储每个Partition的优先位置(可选项)
+
+### spark和flink
+
+flink提供事件级处理，也称为实时流。Spark是迷你批处理。这种方法被称为接近实时。
 
 ## SQL题
 
