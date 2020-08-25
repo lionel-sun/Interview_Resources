@@ -1,6 +1,6 @@
 # 数据研发相关
 
-## 数据库
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `数据库`
 
 ### [范式](https://zhuanlan.zhihu.com/p/63146817)
 
@@ -62,7 +62,7 @@ B+树多用于外存中，磁盘读写代价低（索引可以都放在一个blo
 
 B+树和哈希的数据结构
 
-## 概念问题
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `概念问题`
 
 ### 星型模型和雪花型模型比较
 
@@ -113,7 +113,7 @@ mapjoin方法（同上）
 数据角度：异常数据直接删除（例如ip为0），对不均匀的数据单独计算（如北京数据非常多，单独计算后和其他城市合并），使用hash将可以将key打散，然后再汇总。数据预处理
 
 
-## Hadoop
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hadoop`
 > MR，HDFS等基本概念，面试常见题型
 
 ### HDFS基本结构
@@ -157,7 +157,7 @@ reduce两步：1，对多个map的任务进行合并，排序，写reduce函数�
 
 1读取数据，生成key，value（word， 1）2，按照key排序。3，合并（key，value1，value2。。。）4，汇聚结果输出key，value1+value2+value3
 
-## Hive
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hive`
 > 基本概念，面试常见题型
 
 ### 什么是和Hive
@@ -177,7 +177,7 @@ Hive 具有 SQL 数据库的外表，但应用场景完全不同。Hive 只适�
 
 缺点：1，Hive 的查询延迟很严重
 
-## Spark
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Spark`
 > 基本概念，面试常见题型
 
 ### Spark为什么比MR更快
@@ -220,7 +220,7 @@ spark中任务是以task线程的方式运行， 一个分区就对应一个task
 
 flink提供事件级处理，也称为实时流。Spark是迷你批处理。这种方法被称为接近实时。
 
-## SQL题
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `SQL题`
 
 ## 聚合操作（统计连续10天在线超过1000人的城市）
 
