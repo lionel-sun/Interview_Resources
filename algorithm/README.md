@@ -16,7 +16,7 @@
 
 ## [回溯法（暴力递归）](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/backtrack.md)
 
-## [大数据题目](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/bigdata.md)
+## [大数据量场景题目](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/bigdata.md)
 
 ## [并查集](https://github.com/lionel-sun/Interview_Resources/blob/master/algorithm/union_find.md)
 
