@@ -1,1 +1,1 @@
-# KMP算法
+# KMP和Manacher算法
