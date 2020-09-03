@@ -348,6 +348,11 @@ table和 HashMap 类似，但它是线程安全的，使用 synchronized 来进�
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `面向对象`
 > 基本概念，面试常见题型
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `什么是面向对象`
+
+万物皆可是对象（python中一切都是对象），所有事物都可以抽象为对象。我们将一类事物的属性和行为归纳总结到一起就是封装成为类。
+这个类中每一个个体就是一个实例化，他具有不同的属性值和可以完成不同的行为。他有三大特征。
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `面向对象三大特性`
 
 封装，抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体，只保留一些对外的接口使其与外部发生联系。
@@ -427,7 +432,7 @@ Django和Flask都是web后端，相比较这些框架提供的功能更多，但
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `nameko框架讲一下`
 
 基于AMQP的RPC方式；
-基于AMQP的异步事件发布-订阅；我使用的方式
+基于AMQP的异步事件发布-订阅；我使用的方式。
 简单的HTTP请求，GET和POST；
 使用nameko需要使用RabbitMQ消息代理
 
@@ -435,6 +440,8 @@ Django和Flask都是web后端，相比较这些框架提供的功能更多，但
 
 Kafka是基于一套自己定义TCP协议的。由于选择了nameko使用AMQP协议，所以选择rabbitmq用做消息队列。开源提供的管理界面非常棒，用起来很好用
 性能较好，高并发；吞吐量到万级，MQ功能比较完备。健壮、稳定、易用、跨平台、支持多种语言、文档齐全；
+
+[kafka和rabbitmq对比](https://zhuanlan.zhihu.com/p/69305557)
 
 ### [rabbitmq保重不重复消费](https://blog.csdn.net/n950814abc/article/details/98320046) [面试题](https://juejin.im/post/6844903997489446919)
 

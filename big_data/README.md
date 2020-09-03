@@ -246,7 +246,7 @@ flink提供事件级处理，也称为实时流。Spark是迷你批处理。这�
 
 select LiveID,count(UserID) as visitnum 
 FROM table
-Gourp By LiveID 
+Group By LiveID 
 Order By visitnum DESC(ASC)
 
 select max(visitnum) as maxvisit,LiveID 
@@ -258,6 +258,13 @@ FROM table
 Group By userid, liveid) as T
 where times>3
 
+
+```
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `如何删除两条一模一样的数据中的一条`
+
+
+```sql
 
 ```
 
