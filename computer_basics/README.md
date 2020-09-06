@@ -217,6 +217,12 @@ GET，HEAD，PUT 和 DELETE 等方法都是幂等的，而 POST 方法不是。
 安全的方法除了 GET 之外还有：HEAD、OPTIONS。
 不安全的方法除了 POST 之外还有 PUT、DELETE。
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `http和https的区别，https的加密方式`
+
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `TLS的握手过程`
+
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `打开浏览器访问网址发生了什么`
 
 DNS 解析:将域名解析成 IP 地址 
