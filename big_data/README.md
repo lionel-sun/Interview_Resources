@@ -295,7 +295,7 @@ user_id, city, date
 ```sql
 select b.city
 from 
-(select a.city, count(distinct a.user_id) as count, a.date - rownum temp 
+(select a.city, count(distinct a.user_id) as count, a.date - ROW_NUMBER() OVER(PARTITION BY a.city ORDER BY a.date) AS temp 
 from
 (select t.*
 from user_data t
@@ -335,9 +335,12 @@ where times>3
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `如何删除两条一模一样的数据中的一条`
 
-
+name, value
 ```sql
-
+DELETE FROM
+(SELECT ROW_NUMBER() OVER(PARTITION BY name, value ORDER BY(SELECT 1)) AS no,
+name, value FROM test_table
+) AS T WHERE T.no != 1
 ```
 
 ## 引用资源
