@@ -288,6 +288,18 @@ flink提供事件级处理，也称为实时流。Spark是迷你批处理。这�
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `SQL题`
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `窗口函数`
+
+窗口函数的基本语法如下：<窗口函数> over (partition by <用于分组的列名> order by <用于排序的列名>)
+
+排序函数：
+
+- rank() 1，1，1，4，5，
+- dense_rank() 1，1，1，2，3，
+- row_number() 1，2，3，4，5，
+
+聚合窗口函数：SUM、AVG、MAX、MIN。都是根据order by列名进行排序，对当前所在行之上的进行聚合。
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `聚合操作（统计连续10天在线超过1000人的城市）`
 
 user_id, city, date
@@ -334,6 +346,8 @@ where times>3
 ```
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `如何删除两条一模一样的数据中的一条`
+
+创建视图在视图中删除，视图中没有聚合的操作是可以删除的，删除原表数据。
 
 name, value
 ```sql
