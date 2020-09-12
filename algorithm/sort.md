@@ -175,7 +175,19 @@ def countingSort(arr, maxValue):
 
 不能有负数
 ```python
-
+def radix_sort(s):
+	i = 0
+	max_num = max(s)
+	j = len(max_num)
+	while i<j:
+		bucket = [[] for _ in range(10)]
+		for x in s:
+			bucket[int(x/(10*i))%10].append(x)
+		s.clear()
+		for x in bucket:
+			for m in x:
+				s.append(m)
+		i += 1
 ```
 
 ## [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
