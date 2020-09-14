@@ -76,19 +76,18 @@ def postorderTraversal(self, root: TreeNode) -> List[int]:
 ```
 非递归
 ```python
-    def postorderTraversal(self, root: TreeNode) -> List[int]:
-        if not root: return []
-        cur, stack, res = root, [], []
-        while cur or stack:
-            while cur:
-                res.append(cur.val)
-                stack.append(cur)
-                cur = cur.right
-            
-            tmp = stack.pop()
-            cur = tmp.left
+def postorderTraversal(self, root: TreeNode) -> List[int]:
+	if not root: return []
 
-        return res[::-1]
+	res, q = [], [root]
+
+	while q:
+		cur = q.pop()
+		res.append(cur.val)
+		if cur.left: q.append(cur.left)
+		if cur.right: q.append(cur.right)
+	
+	return res[::-1]
 ```
 
 ## [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)
