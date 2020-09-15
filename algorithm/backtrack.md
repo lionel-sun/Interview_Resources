@@ -72,19 +72,18 @@ def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
 
 ```python
 def permute(self, nums: List[int]) -> List[List[int]]:
-	def process(nums, path, res):
-		if not nums: 
-			res.append(path)
-			return 
-		# picks = set()
-		for i in range(len(nums)):
-			nextpath = path.copy()
-			nextpath += [nums[i]]
-			nextnums = nums.copy()
-			nextnums.pop(i)
-			process(nextnums, nextpath, res)
+	def backtrack(first = 0):
+		if first == n:
+			res.append(nums[:])
+			return
+		for i in range(first, n):
+			nums[i], nums[first] = nums[first], nums[i]
+			backtrack(first+1)
+			nums[i], nums[first] = nums[first], nums[i]
+			
+	n = len(nums)
 	res = []
-	process(nums, [], res)
+	backtrack()
 	return res
 ```
 
@@ -93,18 +92,17 @@ def permute(self, nums: List[int]) -> List[List[int]]:
 ```python
 def permuteUnique(self, nums: List[int]) -> List[List[int]]:
 	def process(nums, path, res):
-		if not nums: 
-			res.append(path)
-			return 
-		picks = set()
+		if not nums:
+			res.append(path[:])
+			return
 		for i in range(len(nums)):
-			if nums[i] not in picks:
-				picks.add(nums[i])
-				nextpath = path.copy()
-				nextpath += [nums[i]]
-				nextnums = nums.copy()
-				nextnums.pop(i)
-				process(nextnums, nextpath, res)
+			if not (i > 0 and nums[i-1] == nums[i]):
+				path.append(nums[i])
+				tmp = nums.pop(i)
+				process(nums[:], path[:], res)
+				path.pop()
+				nums.insert(i, tmp)
+	nums.sort()
 	res = []
 	process(nums, [], res)
 	return res
