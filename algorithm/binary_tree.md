@@ -80,7 +80,6 @@ def postorderTraversal(self, root: TreeNode) -> List[int]:
 	if not root: return []
 
 	res, q = [], [root]
-
 	while q:
 		cur = q.pop()
 		res.append(cur.val)
@@ -115,6 +114,8 @@ def levelOrder(self, root: TreeNode) -> List[List[int]]:
 ```
 
 - [力扣详解](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/tu-jie-er-cha-shu-de-si-chong-bian-li-by-z1m/)
+
+## [二叉树最大宽度](https://leetcode-cn.com/problems/maximum-width-of-binary-tree/)
 
 ## [二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 

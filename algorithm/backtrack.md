@@ -86,7 +86,7 @@ def permute(self, nums: List[int]) -> List[List[int]]:
 	res = []
 	process(nums, [], res)
 	return res
-'''
+```
 
 ## [全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
 空间复杂度可以优化
