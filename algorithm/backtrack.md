@@ -126,7 +126,26 @@ def numDecodings(self, s: str) -> int:
 	return process(s, 0)
 ```
 动态规划
+
+0的位置为0则无解，状态转移方程定义好。当i位置和i-1位置为10-26时候，dp[i] = dp[i-1] + dp[i-2]。i位置是0的时候除了10和20都无解。
+
 ```python
+def numDecodings(self, s: str) -> int: 
+	if s[0] == "0":return 0
+	size = len(s)
+	if size == 0:return 0
+	dp = [0 for x in range(size)]
+	dp[0] = 1
+	for i in range(1, size):
+		if s[i] != "0":
+			dp[i] = dp[i-1]
+		num = int(s[i-1:i+1])
+		if 10 <= num <= 26:
+			if i == 1:
+				dp[i] += 1
+			else:
+				dp[i] += dp[i-2]
+	return dp[-1]
 ```
 
 ## 背包问题
@@ -171,7 +190,20 @@ def PredictTheWinner(self, nums: List[int]) -> bool:
 
 动态规划
 ```python
-
+def PredictTheWinner(self, nums: List[int]) -> bool:
+	size = len(nums)
+	f_dp = [[0] * size for x in range(size)]
+	s_dp = [[0] * size for x in range(size)]
+	for i in range(size):
+		f_dp[i][i] = nums[i]
+	for i in range(1, size):
+		r, l = i, 0
+		while r < size and l < size:
+			f_dp[l][r] = max(nums[r]+s_dp[l][r-1], nums[l]+s_dp[l+1][r])
+			s_dp[l][r] = min(f_dp[l+1][r], f_dp[l][r-1])
+			r+=1
+			l+=1
+	return True if f_dp[0][size-1] >= s_dp[0][size-1] else False
 ```
 
 ## [N皇后 II](https://leetcode-cn.com/problems/n-queens-ii/)
