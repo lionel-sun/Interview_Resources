@@ -31,14 +31,14 @@
 - 微服务的项目
 - [面试所有资料](https://github.com/CyC2018/CS-Notes)
 
-## [ML](https://github.com/lionel-sun/Interview_Resources/tree/master/machine_learning)
+## [ML](https://github.com/lionel-sun/Interview_Resources/tree/master/machine_learning/README.md)
 
 - 基本问题
 - 调整参数
 - 项目相关
 - 引用资源
 
-## [数据研发](https://github.com/lionel-sun/Interview_Resources/tree/master/big_data)
+## [数据研发](https://github.com/lionel-sun/Interview_Resources/tree/master/big_data/README.md)
 
 - 数据库
 - 概念问题
