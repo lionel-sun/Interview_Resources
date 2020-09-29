@@ -133,6 +133,16 @@ B+树和哈希的数据结构
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `概念问题`
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `DDL,DML,DCL,TCL`
+
+DDL（Data Definition Language）数据库定义语言
+
+DML（Data Manipulation Language）数据操纵语言
+
+DCL（Data Control Language）数据库控制语言  授权，角色控制等
+
+TCL（Transaction Control Language）事务控制语言 设置保存点 回滚
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `星型模型和雪花型模型比较`
 
 星型模是一种多维的数据关系，它由一个事实表和一组维表组成。每个维表都有一个维作为主键，所有这些维的主键组合成事实表的主键。
