@@ -143,6 +143,14 @@ DCL（Data Control Language）数据库控制语言  授权，角色控制等
 
 TCL（Transaction Control Language）事务控制语言 设置保存点 回滚
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `udf,udaf,udtf之间的区别`
+
+UDF：用户定义（普通）函数，只对单行数值产生作用；
+
+UDAF：User- Defined Aggregation Funcation；用户定义聚合函数，可对多行数据产生作用；等同与SQL中常用的SUM()，AVG()，也是聚合函数；
+
+UDTF：User-Defined Table-Generating Functions，用户定义表生成函数，用来解决输入一行输出多行；
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `星型模型和雪花型模型比较`
 
 星型模是一种多维的数据关系，它由一个事实表和一组维表组成。每个维表都有一个维作为主键，所有这些维的主键组合成事实表的主键。
