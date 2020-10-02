@@ -68,3 +68,15 @@ DELETE FROM
 name, value FROM test_table
 ) AS T WHERE T.no != 1
 ```
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `leetcode SQL题`
+
+#### [删除重复的电子邮箱](https://leetcode-cn.com/problems/delete-duplicate-emails/)
+
+```sql
+delete p1
+from Person p1, Person p2
+where p1.Email = p2.Email and p1.Id > p2.Id;
+```
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `牛客 SQL题`
