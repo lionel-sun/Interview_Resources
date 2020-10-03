@@ -79,4 +79,24 @@ from Person p1, Person p2
 where p1.Email = p2.Email and p1.Id > p2.Id;
 ```
 
+#### [行程和用户](https://leetcode-cn.com/problems/trips-and-users/)
+
+#### [部门工资前三高的所有员工](https://leetcode-cn.com/problems/department-top-three-salaries/)
+
+```sql
+select 
+    d.name as department,
+    e.name as employee,
+    e.salary
+from 
+    employee as e,
+    department as d,
+    (select
+        id, dense_rank() over(partition by departmentid order by salary desc) as rrank
+    from 
+        employee) as c
+where 
+    e.departmentid = d.id and e.id = c.id and c.rrank <4
+```
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `牛客 SQL题`
