@@ -71,6 +71,8 @@ name, value FROM test_table
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `leetcode SQL题`
 
+#### [leetode sql题库](https://leetcode-cn.com/problemset/all/?search=sql)
+
 #### [删除重复的电子邮箱](https://leetcode-cn.com/problems/delete-duplicate-emails/)
 
 ```sql
@@ -119,3 +121,5 @@ where
 ```
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `牛客 SQL题`
+
+#### [nowcoder sql题库](https://www.nowcoder.com/ta/sql)
