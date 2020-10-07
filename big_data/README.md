@@ -140,11 +140,11 @@ B+树和哈希的数据结构
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `DDL,DML,DCL,TCL`
 
-DDL（Data Definition Language）数据库定义语言
+DDL（Data Definition Language）数据库定义语言 CREATE DROP ALTER
 
-DML（Data Manipulation Language）数据操纵语言
+DML（Data Manipulation Language）数据操纵语言 SELECT UPDATE INSERT DELETE
 
-DCL（Data Control Language）数据库控制语言  授权，角色控制等
+DCL（Data Control Language）数据库控制语言  授权，角色控制等 
 
 TCL（Transaction Control Language）事务控制语言 设置保存点 回滚
 
