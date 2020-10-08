@@ -148,6 +148,18 @@ DCL（Data Control Language）数据库控制语言  授权，角色控制等
 
 TCL（Transaction Control Language）事务控制语言 设置保存点 回滚
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `五大约束`
+
+1.主键约束（Primay Key Coustraint） 唯一性，非空性；
+
+2.唯一约束 （Unique Counstraint）唯一性，可以空，但只能有一个；
+
+3.默认约束 (Default Counstraint) 该数据的默认值；
+
+4.外键约束 (Foreign Key Counstraint) 需要建立两表间的关系；
+
+5.非空约束（Not Null Counstraint）:设置非空约束，该字段不能为空。
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `udf,udaf,udtf之间的区别`
 
 UDF：用户定义（普通）函数，只对单行数值产生作用；
