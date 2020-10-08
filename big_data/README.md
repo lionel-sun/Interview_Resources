@@ -2,7 +2,9 @@
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `数据库`
 
-### [范式](https://zhuanlan.zhihu.com/p/63146817
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `范式`
+
+- [范式](https://zhuanlan.zhihu.com/p/63146817)
 
 1NF 属性不可分，确保每列保持原子性（地址中拆分出城市）
 
