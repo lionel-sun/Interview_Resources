@@ -29,9 +29,11 @@ gouryby b.city
 having count>=1000
 ) b
 where b.temp >=10
-
-
 ```
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `行转列，列转行函数`
+
+pivot和unpivot
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `直播统计`
 
