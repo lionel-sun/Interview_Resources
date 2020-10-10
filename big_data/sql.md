@@ -35,6 +35,22 @@ where b.temp >=10
 
 pivot和unpivot
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `将一列根据分隔符分割成多列`
+
+SUBSTRING_INDEX(str,delim,count)  -- str: 被分割的字符串; delim: 分隔符; count: 分割符出现的次数。
+
+count 为整数标识从左边开始，count为负数从右边开始。
+
+```sql
+
+select gmt_create
+,(select substring_index(substring_index(bill_ids,',',1),',',-1)) bill_id1
+,(select substring_index(substring_index(bill_ids,',',2),',',-1)) bill_id2
+,(select substring_index(substring_index(bill_ids,',',3),',',-1)) bill_id3
+from lt_repayment;
+
+```
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `直播统计`
 
 1、统计每天每个直播间的访客数、每天最大访客数的直播间
