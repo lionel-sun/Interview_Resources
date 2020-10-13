@@ -225,11 +225,14 @@ UDTF：User-Defined Table-Generating Functions，用户定义表生成函数，�
 
 现象是hive运算卡在99%无法完成。OOM报错，一些executor使用率低。
 
-原因：在map和spark的stage1阶段由于数据块大小一致，不会出现倾斜。但是对数据进行shuffle
+原因：在map和spark的stage1阶段由于数据块大小一致，不会出现倾斜。但是对数据进行shuffle后，在reduce或者stage2阶段就会出现倾斜。
 
-数据倾斜产生的现象是hive运算卡在99.9%。OOM错误，一些executor使用率低。原因是key分布不均匀导致的，Shuffle动作中，相同key的值就会拉到一个或几个节点上，就容易发生单点问题。
+原始数据：保证压缩前每个文件中的数据量基本一致（128M每块大小一致，但是数据量可能不一致），生成数据要尽量减少产生不可切分的文件。流式数据建议使用随机、轮询等方式，尽量使各个topic的各partition的数据平衡。
 
-mapjoin方法（关联操作中有一张小表，将小表直接读入内存，在map阶段直接拿另外一张表和内存中的表做计算，计算结果给reduce，提高了reduce的效率）
+在shuffle之前做一些预处理：1，通过etl预处理避免（将一些可能遇到的前置到etl中进行操作）。2过滤掉一些不必要key（先group by一下看看数据分布，把不需要的都筛掉）3reduce join 改成map join。（关联操作中有一张小表，将小表直接读入内存，在map阶段直接拿另外一张表和内存中的表做计算，计算结果给reduce，提高了reduce的效率）
+
+在shuffle阶段可以进行的操作：
+spark中shuffle并行度默认是200，可以适当增加。对一些超大量的key进行单独运算，然后计算结果进行合并（如key是北京的数据非常多，单独计算后和其他城市合并）。对key加上一个随机数取模作为第一阶段聚合的key，这样就可以均匀分布，然后在按照原始key进行第二阶段聚合。
 
 Hive参数调优：
 
@@ -239,11 +242,6 @@ set hive.groupby.skewindata=true;数据倾斜时负载均衡，当选项设定�
 
 第一个MRjob，Map的输出结果集合会随机分布到Reduce中，每个Reduce（相同key可能会发到不同reduce中）做部分聚合操作
 第二个MRjob，再根据key分到不同reduce中
-
-先group操作把key进行一次reduce，然后在进行count或者distinct count
-
-从数据角度：在key上修改，aaa（大量数据的）加上后缀氛围1，2，3，4，5等，第一次计算后恢复在第二次计算。
-对不均匀的数据单独计算（如key是北京的数据非常多，单独计算后和其他城市合并），使用hash将可以将key打散，然后再汇总。数据预处理
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hadoop`
 > MR，HDFS等基本概念，面试常见题型
