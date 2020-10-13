@@ -223,6 +223,10 @@ UDTF：User-Defined Table-Generating Functions，用户定义表生成函数，�
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `数据倾斜怎么办？`
 
+现象是hive运算卡在99%无法完成。OOM报错，一些executor使用率低。
+
+原因：在map和spark的stage1阶段由于数据块大小一致，不会出现倾斜。但是对数据进行shuffle
+
 数据倾斜产生的现象是hive运算卡在99.9%。OOM错误，一些executor使用率低。原因是key分布不均匀导致的，Shuffle动作中，相同key的值就会拉到一个或几个节点上，就容易发生单点问题。
 
 mapjoin方法（关联操作中有一张小表，将小表直接读入内存，在map阶段直接拿另外一张表和内存中的表做计算，计算结果给reduce，提高了reduce的效率）
@@ -277,19 +281,23 @@ Hadoop计算框架Shuffle处于map和reduce阶段之间。
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `MR编程流程模型`
 
-map两步：1，设置inputFormat类，将我们的数据切分成key，value对，输入到第二步。
-2，自定义map逻辑，处理我们第一步的输入数据，然后转换成新的key，value对进行输出
+map阶段：1，设置inputFormat类，将我们的数据切分成key，value对，输入到自定义的map函数。
+2，根据自定义map逻辑，处理我们第一步的输入数据，然后转换成新的key，value对进行输出。
 
-shuffle四步：3，对输出的key，value对进行分区。相同key的数据发送到同一个reduce里面去，相同key合并，value形成一个集合。
-4，对不同分区的数据按照相同的key进行排序。5，对分组后的数据进行规约(combine操作)，降低数据的网络拷贝（可选步骤）
-6，排序后分组，相同key的value放到同一个集合。
+shuffle阶段：3，对map输出的key，value对进行分区。4，对不同分区的数据针对key进行排序。
+5，相同key的数据发送到同一个reduce里面去。
+6，然后会对这些数据文件进行合并和排序（归并排序），合并成大文件后shuffle阶段结束。
 
-reduce两步：1，对多个map的任务进行合并，排序，写reduce函数自己的逻辑，对输出key value合并处理转换新的key，value输出。
-2，设置outputformat将输出的key，value对数据进行保存到文件中
+reduce阶段：1，将按照key分组的数据输入到自定义的reduce函数中，对输入key value合并处理转换新的key，value输出。
+2，设置outputformat将输出的key，value对数据进行保存到文件中。
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `wordcount讲解`
 
-1读取数据，生成key，value（word， 1）2，按照key排序。3，合并（key，value1，value2。。。）4，汇聚结果输出key，value1+value2+value3
+1. **input** : 读取文本文件；
+2. **splitting** : 将文件按照行进行拆分，此时得到的 `K1` 行数，`V1` 表示对应行的文本内容；
+3. **mapping** : 并行将每一行按照空格进行拆分，拆分得到的 `List(K2,V2)`，其中 `K2` 代表每一个单词，由于是做词频统计，所以 `V2` 的值为 1，代表出现 1 次；
+4. **shuffling**：由于 `Mapping` 操作可能是在不同的机器上并行处理的，所以需要通过 `shuffling` 将相同 `key` 值的数据分发到同一个节点上去合并，这样才能统计出最终的结果，此时得到 `K2` 为每一个单词，`List(V2)` 为可迭代集合，`V2` 就是 Mapping 中的 V2；
+5. **Reducing** : 这里的案例是统计单词出现的总次数，所以 `Reducing` 对 `List(V2)` 进行归约求和操作，最终输出。
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hive`
 > 基本概念，面试常见题型
