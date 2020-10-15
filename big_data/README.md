@@ -172,11 +172,11 @@ TCL（Transaction Control Language）事务控制语言 设置保存点 回滚
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `udf,udaf,udtf之间的区别`
 
-UDF：用户定义（普通）函数，只对单行数值产生作用；
+UDF：用户定义（普通）函数，只对单行数值产生作用；单行进入，单行输出
 
-UDAF：User- Defined Aggregation Funcation；用户定义聚合函数，可对多行数据产生作用；等同与SQL中常用的SUM()，AVG()，也是聚合函数；
+UDAF：User- Defined Aggregation Funcation；用户定义聚合函数，可对多行数据产生作用；等同与SQL中常用的SUM()，AVG()，也是聚合函数；多行进入，单行输出。
 
-UDTF：User-Defined Table-Generating Functions，用户定义表生成函数，用来解决输入一行输出多行；
+UDTF：User-Defined Table-Generating Functions，用户定义表生成函数，用来解决输入一行输出多行；多行进入，多行输出。
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `星型模型和雪花型模型比较`
 
@@ -243,6 +243,12 @@ set hive.groupby.skewindata=true;数据倾斜时负载均衡，当选项设定�
 第一个MRjob，Map的输出结果集合会随机分布到Reduce中，每个Reduce（相同key可能会发到不同reduce中）做部分聚合操作
 第二个MRjob，再根据key分到不同reduce中
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `维度表和事实表`
+
+维度表：产品列表，员工列表等不经常修改的数据表，包括这些主题的各个维度属性。
+
+事实表：类似于日志，销售订单，员工打开记录等。经常更新。垂直增长的。
+
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hadoop`
 > MR，HDFS等基本概念，面试常见题型
 
@@ -297,6 +303,16 @@ reduce阶段：1，将按照key分组的数据输入到自定义的reduce函数�
 4. **shuffling**：由于 `Mapping` 操作可能是在不同的机器上并行处理的，所以需要通过 `shuffling` 将相同 `key` 值的数据分发到同一个节点上去合并，这样才能统计出最终的结果，此时得到 `K2` 为每一个单词，`List(V2)` 为可迭代集合，`V2` 就是 Mapping 中的 V2；
 5. **Reducing** : 这里的案例是统计单词出现的总次数，所以 `Reducing` 对 `List(V2)` 进行归约求和操作，最终输出。
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `mr的join原理`
+
+1，reduce join：
+
+Map端的主要工作：为来自不同表或文件的key/value时，打标签以区别不同来源的记录。然后用连接字段作为key，其余部分和新加的标志作为value，最后进行输出。
+
+Reduce端的主要工作：在Reduce端以连接字段作为key的分组已经完成，我们只需要在每一个分组当中将那些来源于不同文件的记录（在Map阶段已经打标志）分开，最后进行合并就ok了。
+
+2，map join：适用于缓存的文件必须是小文件，将小表读入内存中。在map阶段直接拿另外一张表和内存中的表做计算。计算完直接输出结果，降少数据传输和reduce的工作量可以提高效率。
+
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hive`
 > 基本概念，面试常见题型
 
@@ -321,14 +337,50 @@ Hive 具有 SQL 数据库的外表，但应用场景完全不同。Hive 只适�
 
 [HIVE：数据倾斜](https://www.jianshu.com/p/4f41bcdd7462)
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `UDF、UDTF、UDAF`
+1、数据倾斜的原因：（1）、key分布不均匀。（2）、业务数据本身的原因。（3）、建表考虑不周。（4）、某些SQL本身就有数据倾斜。
+
+解决方式：（1）给key一个随机的值，打散key。（2）Hive中的参数调节
+
+（3）SQL语句的调节：1、选用join key分布最均匀的表作为驱动表。2、大小表join的时候，让维度较小的表先进内存。3、大表join的时候，把空值的key变成一个字符串加上一个随机数，把倾斜的数据分到不同的reduce上。4、count distinct大量相同特殊值。
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `hive中UDF，UDAF，UDTF三种自定义函数`
+
+UDF：用户定义（普通）函数，只对单行数值产生作用；单行进入，单行输出
+
+UDAF：User- Defined Aggregation Funcation；用户定义聚合函数，可对多行数据产生作用；等同与SQL中常用的SUM()，AVG()，也是聚合函数；多行进入，单行输出。
+
+UDTF：User-Defined Table-Generating Functions，用户定义表生成函数，用来解决输入一行输出多行；多行进入，多行输出。
+
+###  ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `hive调优`
+
+**1、Group by：默认情况下，map阶段同一key的数据会发给一个reduce，当一个key数据过大就会倾斜，并不是所有的聚合操作都需要reduce端完成，很多聚合操作都可以现在map端进行部分聚合，最后在reduce端得出最终结果。（1）、开启在map端聚合：hive.map.aggr = true。（2）、在map端进行聚合操作的条目数：hive.groupby.mapaggr.checkinterval = 100000。（3）、有数据倾斜的时候进行负载均衡：hive.groupby.skewindata = true。**
+
+**2、行列过滤：列处理：只拿自己需要的列，如果有，尽量使用分区过滤。行处理：提前进行数据过滤将where语句放在底层数据表中先过滤后合并。**
+
+**3、小文件进行合并：在map执行之前合并小文件，减少map的数量，设置 set hive.input.format = org.apache.hadoop.hive.ql.io.CombineHiveInputFormat。**
+
+**4、并行执行：在Hive中可能有很多个阶段，不一定是一个阶段，这些阶段并非相互依赖的。然后这些阶段可以并行完成，设置并行：set hive.exec.parallel = true。**
+
+**5、调整map的数量和reduce的数量。**
+
+
+
+ ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Hive中sort by、order by、cluster by、distribute by的区别`
+
+**1、sort by：不是全局排序，其在数据进入reducer前完成排序。**
+
+**2、order by：会对输入做全局排序，因此只有一个reducer，如果有多个reducer无法保证全局的排序。计算规模较大，时间可能会很长。**
+
+**3、cluster by：除了具有distribute by的功能，还具有了sort by的功能。**
+
+**4、distribute by：按照指定的字段对数据进行划分输出到不同的reduce中。**
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `HIVE窗口函数`
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Spark`
 > 基本概念，面试常见题型
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Spark和hadoop还有hive区别`
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Spark和hadoop区别同下`
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Spark为什么比MR更快`
 
@@ -365,6 +417,16 @@ spark中任务是以task线程的方式运行， 一个分区就对应一个task
 3，一个rdd会依赖于其他多个rdd。这里就涉及到rdd与rdd之间的依赖关系，spark任务的容错机制就是根据这个特性（血统）而来。
 4，一个Partitioner，即RDD的分区函数（可选项）
 5，一个列表，存储每个Partition的优先位置(可选项)
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `RDD的弹性体现在哪里？`
+
+1.自动进行内存和磁盘切换 2.基于lineage的高效容错。 3.task如果失败会特定次数的重试 4.stage如果失败会自动进行特定次数的重试，而且只会只计算失败的分片。5.数据调度弹性：DAG TASK 和资源管理无关 7.数据分片的高度弹性
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `RDD是什么？`
+
+RDD(Resilient Distributed Datasets) ,弹性分布式数据集， 是分布式内存的一个抽象概念，指的是一个只读的，可分区的分布式数据集，这个数据集的全部或部分可以缓存在内存中，在多次计算间重用。
+
+RDD提供了一种高度受限的共享内存模型，即RDD是只读的记录分区的集合，只能通过在其他RDD执行确定的转换操作（如map、join和group by）而创建，然而这些限制使得实现容错的开销很低。对开发者而言，RDD可以看作是Spark的一个对象，它本身运行于内存中，如读文件是一个RDD，对文件计算是一个RDD，结果集也是一个RDD ，不同的分片、 数据之间的依赖 、key-value类型的map数据都可以看做RDD。
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `spark和flink`
 
