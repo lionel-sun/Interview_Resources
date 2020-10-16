@@ -14,7 +14,32 @@
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `聚合操作（统计连续10天在线超过1000人的城市）`
 
+table logs
 user_id, city, date
+
+```sql
+select 
+	t3.city
+from
+(select 
+	t2.city, t2.uid
+from
+(select
+	t1.city, t1.user_id, date_sub(t1.date, t1.rnk) as dt
+from 
+	(select 
+		l.city, l.user_id, l.date, row_number() over(partition by l.user_id order by l.date) as rnk
+	from 
+		logs as l) as t1) as t2
+group by
+	t2.city, t2.user_id, t2.dt
+having 
+	count(t2.dt) > 10) as t3
+group by
+	t3.city
+having 
+	count(t3.user_id) > 1000
+```
 
 ```sql
 select b.city
