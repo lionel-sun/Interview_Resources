@@ -107,8 +107,8 @@ where times>3
 name, value
 ```sql
 DELETE FROM
-(SELECT ROW_NUMBER() OVER(PARTITION BY name, value ORDER BY(SELECT 1)) AS no,
-name, value FROM test_table
+(SELECT ROW_NUMBER() OVER(PARTITION BY name, value ORDER BY(SELECT 1)) AS no,name, value 
+FROM test_table
 ) AS T WHERE T.no != 1
 ```
 
