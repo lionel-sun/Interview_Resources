@@ -2,7 +2,7 @@
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `with as用法和子句排序`
 
-CTE 语法的with as用法和子句使用的顺序
+CTE 语法的with as用法和子句使用的顺序。CTE可以引用自身，和同一个with下已经定义的，但是不能引用后面的避免互相嵌套递归。
 
 ```sql
 with 

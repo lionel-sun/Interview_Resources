@@ -25,7 +25,7 @@
 - Linux
 - 计算机网络
 - python
-- java
+- java [Java 面试知识点 240题](https://www.yuque.com/docs/share/d2fb45c9-a6ef-42d4-a88d-26ecf755495e?#YBqXY)
 - 面向对象
 - 工具（git，docker，微服务等）
 - 微服务的项目
@@ -45,5 +45,5 @@
 - MapReduce
 - Hive
 - Spark
-- SQL题
+- [sql题总结](https://github.com/lionel-sun/Interview_Resources/tree/master/big_data/sql.md)
 - 引用资源
