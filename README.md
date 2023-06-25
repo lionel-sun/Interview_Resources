@@ -2,9 +2,11 @@
 
 目标岗位：Data Engineer
 
-## [Non-Technical Questions]()
+## [Non-Technical Questions](https://github.com/lionel-sun/Interview_Resources/blob/master/non_technical/README.md)
 
+## [Big Data](https://github.com/lionel-sun/Interview_Resources/blob/master/big_data/README_en.md)
 
+## [Java And Python](https://github.com/lionel-sun/Interview_Resources/blob/master/java_python/README_en.md)
 
 
 # 面试复习准备材料
