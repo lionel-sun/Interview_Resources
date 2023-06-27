@@ -7,7 +7,13 @@
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `是否符合职位描述中概述的要求 requirements outlined in the job description`
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) ``
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `What did you learn from your last project? (verify alignment with resume)`
+
+In my previous project, I use Flink technology to consume data from Kafka and compute e-commence metrics. It was a valuable experience where I effectively communicated with the stakeholders and delivered high-quality results. Throughout the project, we encountered several instances of unexpected calculation results. To address the issue, I utilize techniques such as record logging, and comparing with offline detail data. By doing so, I ensured the accuracy of the data.
+
+This project allowed me to become proficient in various technologies, including reading data from HBase, consuming data from Kafka, and writing data to both MySQL and Kafka. I successfully leveraged these technologies to meet project requirements efficiently.
+
+Overall, this experience not only strengthened my technical skills but also honed my ability to collaborate with business stakeholders and troubleshoot issues effectively. I am confident that these skills and experiences will be valuable in future projects.
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `是否符合候选人的需 opening matches what the candidate is looking for`
 
