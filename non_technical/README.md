@@ -3,6 +3,18 @@
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `以前和当前工作经历的问题 previous and current work experiences`
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why did you join and leave your last three positions?`
+
+In my previous three positions, I had different reasons for joining and leaving. Let me tell you about it.
+
+In my first and second jobs, I worked for the same client in a consultant role. When my contract with the first company ended, it was likely due to a decrease in the client's project share, and they didn't offer me a renewal. Fortunately, the second company extended an offer to me, and since the work was still related to the same project, I decided to join them. However, the job responsibilities remained unchanged.
+
+Unfortunately, the COVID-19 pandemic severely impacted our project, and after my contract expired, there wasn't an opportunity for renewal. Concerned about the situation and my family's well-being, I made the decision to return to China. I then joined Pinduoduo, one of the largest e-commerce companies in China, as I believed a larger company would provide more opportunities for personal growth.
+
+Later in October of last year, I joined the Temu project, which had rapid and exciting development. I learned a lot during my time there. However, one drawback was that the workload was consistently high, I once worked nearly 60 days without a break. which took a toll on my physical and mental well-being. I realized that I needed to find a job that offered a better work-life balance.
+
+Currently, I have a strong desire to return to Italy as I am drawn to its environment and culture. I'm seeking a job that allows me to achieve a balance between work and personal life. The combination of my preference for Italy and the need for a healthier work situation is what motivated me to make this decision.
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) ``
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `是否符合职位描述中概述的要求 requirements outlined in the job description`
