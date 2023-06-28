@@ -9,11 +9,25 @@
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `What did you learn from your last project? (verify alignment with resume)`
 
-In my previous project, I use Flink technology to consume data from Kafka and compute e-commence metrics. It was a valuable experience where I effectively communicated with the stakeholders and delivered high-quality results. Throughout the project, we encountered several instances of unexpected calculation results. To address the issue, I utilize techniques such as record logging, and comparing with offline detail data. By doing so, I ensured the accuracy of the data.
+In my previous project, we implemented a Lambda architecture to develop a data dashboard for our business needs.  The architecture involved utilizing both real-time and batch processing technologies, with Flink for real-time processing and Hive for offline processing.
 
-This project allowed me to become proficient in various technologies, including reading data from HBase, consuming data from Kafka, and writing data to both MySQL and Kafka. I successfully leveraged these technologies to meet project requirements efficiently.
+We used Hive, a powerful data warehousing framework for the offline processing component. We designed and implemented Hive queries and workflows to process large volumes of data in batches. This involved performing complex transformations, aggregations, and calculations to generate comprehensive reports and analyses. The offline processing ensured that we had complete and accurate data, and the results were eventually used to update the real-time metrics.
 
-Overall, this experience not only strengthened my technical skills but also honed my ability to collaborate with business stakeholders and troubleshoot issues effectively. I am confident that these skills and experiences will be valuable in future projects.
+I use Flink technology to consume data from Kafka and compute e-commence metrics. It was a valuable experience where I effectively communicated with the stakeholders and delivered high-quality results. Throughout the project, we encountered several instances of unexpected calculation results. I utilize techniques such as record logging and comparing with offline detail data to address the issue. By doing so, I ensured the accuracy of the data.
+
+This project made me proficient in various technologies, including reading data from HBase, consuming data from Kafka, and writing data to both MySQL and Kafka. I successfully leveraged these technologies to meet project requirements efficiently.
+
+Overall, this experience strengthened my technical skills and honed my ability to collaborate with business stakeholders and troubleshoot issues effectively. I am confident that these skills and experiences will be valuable in future projects.
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `What is your experience with X? (for each of the skills listed in the position description)`
+
+I have a solid foundation and practical experience in working with a range of technologies, including Hadoop, Hive, Flink, Kafka, Java, and Python.
+
+I have worked on data ingestion, processing, and analysis using Hive, which involved writing complex queries and optimizing performance.
+
+Regarding Flink, I have utilized it for real-time data streaming and processing. I have developed Flink applications to handle large-scale data streams, perform transformations, and apply analytics to derive meaningful insights. For data streaming and messaging, I have worked extensively with Kafka. I have experience in producing and consuming messages, and integrating Kafka with other databases in the data pipeline. 
+
+In terms of programming languages, I have a strong command of Java, which I have used for developing Flink applications. Additionally, I also use Python for data processing, scripting, and building machine learning models.
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `是否符合候选人的需 opening matches what the candidate is looking for`
 
