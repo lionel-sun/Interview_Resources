@@ -15,7 +15,17 @@ Later in October of last year, I joined the Temu project, which had rapid and ex
 
 Currently, I have a strong desire to return to Italy as I am drawn to its environment and culture. I'm seeking a job that allows me to achieve a balance between work and personal life. The combination of my preference for Italy and the need for a healthier work situation is what motivated me to make this decision.
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) ``
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why are you looking for a new position?`
+
+I was attracted to Agile Lab for several reasons. Firstly, I learned that Agile Lab was recognized as one of Europe's 1000 fastest-growing companies in both 2021 and 2022. This impressive achievement reflects the company's dynamic and forward-thinking approach.
+
+I was particularly interested in Agile Lab's innovative technologies such as Witboost and Data Mesh. The company's name itself, 'Agile,' means its ability to adapt to changing needs and technologies. I aspire to agile think and to constantly learn and apply new technologies to meet new challenges.
+
+Furthermore, Agile Lab offers flexible work arrangements, including the option for remote work, which I believe can greatly enhance productivity. The company truly values work-life balance, and this aligns with my desire to have a fulfilling and balanced professional and personal life.
+
+I also noticed that Agile Lab provides comprehensive training and support for its employees, both in terms of time and financial investment. This commitment to professional development is crucial for me as I seek continuous growth in my career. Additionally, the fact that Agile Lab is actively recruiting engineers at different levels indicates a clear career progression and advancement system within the company. This offers me the opportunity for long-term stability and the ability to continually enhance my skills within a structured career path.
+
+Overall, I am excited about the prospect of joining Agile Lab because of its impressive growth, focus on cutting-edge technologies, commitment to work-life balance, and opportunities for career advancement and skill development that the company offers.
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `是否符合职位描述中概述的要求 requirements outlined in the job description`
 
