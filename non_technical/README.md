@@ -15,7 +15,7 @@ Later in October of last year, I joined the Temu project, which had rapid and ex
 
 Currently, I have a strong desire to return to Italy as I am drawn to its environment and culture. I'm seeking a job that allows me to achieve a balance between work and personal life. The combination of my preference for Italy and the need for a healthier work situation is what motivated me to make this decision.
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why are you looking for a new position?`
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why did you apply with Agile Lab?`
 
 I was attracted to Agile Lab for several reasons. Firstly, I learned that Agile Lab was recognized as one of Europe's 1000 fastest-growing companies in both 2021 and 2022. This impressive achievement reflects the company's dynamic and forward-thinking approach.
 
