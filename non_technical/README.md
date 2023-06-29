@@ -51,3 +51,11 @@ For me, it's not just about the salary. I also value job satisfaction, growth op
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `What is the notice period you would need if you were hired?`
 
 If I were offered the position, I'd appreciate a notice period of about 1.5 to 2 months. My current job is pretty demanding, and I want to make sure I leave things in good hands. It'll take me around a month to wrap up my responsibilities and hand over any ongoing projects. Plus, I'll need another couple of weeks to pack up and settle down in Italy. So, having 1.5 to 2 months of notice would give me the right amount of time to make a smooth transition and hit the ground running in my new role.
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why are you looking for a new position? `
+
+I'm currently working at Temu, and it's been an incredible experience. The company has been rapidly expanding, and we've successfully established a presence in major European and American regions. The technical competence of my colleagues has been outstanding, and I've had the opportunity to learn a great deal during my time here.
+
+However, the requirement of the job has led me to consider new opportunities. At Temu, the work hours have been quite extensive, with an average of 13 hours spent at the office each day, including a one-hour break for lunch and dinner. I typically work six days a week, and there have been instances where I've gone nearly 60 days without a day off. This huge workload has taken a toll on both my physical and mental well-being, leaving me feeling tired, stressed, and struggling with insomnia.
+
+For my health and overall well-being, I'm seeking a healthier work-life balance. I believe that finding a position that allows me to have a more balanced and fulfilling lifestyle is essential. I value the lessons and experiences gained at Temu, but I feel it's time for me to prioritize my own health and seek a more sustainable work environment.
