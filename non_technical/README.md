@@ -2,6 +2,8 @@
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `自我介绍`
 
+爱久
+
 Hi there! My Chinese name is Bojian Sun, my English name is Lionel, and I'm excited to introduce myself. I completed my Master's degree in Computer Science from Sapienza University of Rome. I had the opportunity to work in Italy for two and a half years, where I primarily provided data support for project management.
 
 Currently, I am working at Temu, which is part of the Pinduoduo company, and I have been with them for two years now. In October last year, I joined the Temu project, and it has been an enriching experience. My role at Temu involves various technologies such as Hive, Flink, Kafka, Hadoop, Java, and Python. I have been responsible for developing data reports that provide valuable insights for COO decision-making.
