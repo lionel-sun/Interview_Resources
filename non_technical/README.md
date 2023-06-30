@@ -1,5 +1,16 @@
 # Non-Technical Questions(Behavioral Questions)
 
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `自我介绍`
+
+Hi there! My Chinese name is Bojian Sun, my English name is Lionel, and I'm excited to introduce myself. I completed my Master's degree in Computer Science from Sapienza University of Rome. I had the opportunity to work in Italy for two and a half years, where I primarily provided data support for project management.
+
+Currently, I am working at Temu, which is part of the Pinduoduo company, and I have been with them for two years now. In October last year, I joined the Temu project, and it has been an enriching experience. My role at Temu involves various technologies such as Hive, Flink, Kafka, Hadoop, Java, and Python. I have been responsible for developing data reports that provide valuable insights for COO decision-making.
+
+Throughout my professional journey, I have developed strong skills in data streaming development, project management, and utilizing cutting-edge technologies. I am passionate about data to drive strategic decision-making and improve operational efficiency.
+
+Beyond my technical expertise, I am a highly motivated and collaborative team player. I thrive in dynamic and challenging environments, where I can contribute my skills and learn from others. I believe in continuous learning and staying updated with the latest industry trends.
+
+I'm excited to have the opportunity to further discuss my experiences and how I can contribute to the agile lab. Thank you for considering my application.
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `以前和当前工作经历的问题 previous and current work experiences`
 
