@@ -4,7 +4,7 @@
 
 ## [Non-Technical Questions](https://github.com/lionel-sun/Interview_Resources/blob/master/non_technical/README.md)
 
-## [work experience](https://github.com/lionel-sun/Interview_Resources/blob/master/non_technical/WE.md)
+## [Work Experience](https://github.com/lionel-sun/Interview_Resources/blob/master/non_technical/WE.md)
 
 ## [Big Data](https://github.com/lionel-sun/Interview_Resources/blob/master/big_data/README_en.md)
 
