@@ -11,6 +11,7 @@ set去重，list不去重。concat_ws(',',collect_set(name)) as name_set
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `窗口函数`
 
 窗口函数的基本语法如下：<窗口函数> over (partition by <用于分组的列名> order by <用于排序的列名>)
+
 行限制语法：rows between ... and ...（range between事从数值上限制。）
 - unbounded preceding 前面所有
 - unbounded following 后面所有
