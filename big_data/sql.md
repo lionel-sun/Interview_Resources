@@ -1,5 +1,9 @@
 # ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `SQL题`
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `collect_set()/collect_list()/concat_ws()`
+
+set去重，list不去重。concat_ws(',',collect_set(name)) as name_set
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `解析json`
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `lateral view explode用法`
@@ -7,7 +11,13 @@
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `窗口函数`
 
 窗口函数的基本语法如下：<窗口函数> over (partition by <用于分组的列名> order by <用于排序的列名>)
-行限制语法：
+行限制语法：rows between ... and ...
+- unbounded preceding 前面所有
+- unbounded following 后面所有
+- current row 当前行
+- n following 后n行
+- n preceding 前n行
+range between事从数值上限制。
 排序函数：
 
 - rank() 1，1，1，4，5，
@@ -16,8 +26,10 @@
 
 聚合窗口函数：SUM、AVG、MAX、MIN。都是根据order by列名进行排序，对当前所在行之上的进行聚合。
 
-lead
-lag
+lead(字段值,行数,默认值)
+lag(字段值,行数,默认值)
+
+lead(date,9,null) OVER(Partition BY city Order BY date ASC) AS data_p9d
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `聚合操作（统计连续10天在线超过1000人的城市）`
 
