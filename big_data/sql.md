@@ -8,6 +8,19 @@ set去重，list不去重。concat_ws(',',collect_set(name)) as name_set
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `lateral view explode用法`
 
+```sql
+select good_id,get_json_object(sale_json,'$.monthSales') as monthSales
+from tableName 
+LATERAL VIEW explode(split(goods_id,','))goods as good_id 
+LATERAL VIEW explode(split(regexp_replace(regexp_replace(json_str , '\\[|\\]',''),'\\}\\,\\{','\\}\\;\\{'),'\\;')) sales as sale_json;
+
+select 
+b.name
+,b.age
+from tableName a lateral view
+json_tuple('{"name":"zhangsan","age":18}','name','age') b as name,age;
+```
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `窗口函数`
 
 窗口函数的基本语法如下：<窗口函数> over (partition by <用于分组的列名> order by <用于排序的列名>)
