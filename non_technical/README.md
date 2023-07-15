@@ -14,7 +14,7 @@ Beyond my technical expertise, I am a highly motivated and collaborative team pl
 
 I'm excited to have the opportunity to further discuss my experiences and how I can contribute to the agile lab. Thank you for considering my application.
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `个人有缺点`
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `个人的优缺点`
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `以前和当前工作经历的问题 previous and current work experiences`
 
