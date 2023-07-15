@@ -1,36 +1,5 @@
 # ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `SQL题`
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `with as用法和子句排序`
-
-CTE 语法的with as用法和子句使用的顺序。CTE可以引用自身，和同一个with下已经定义的，但是不能引用后面的避免互相嵌套递归。
-
-```sql
-with 
-	t1 as (
-		select 
-		from
-	)
-	t2 as (
-		select 
-		from t1
-	)
-select
-	t2.uid, count(t2.uid)
-from
-	t2
-where
-	t2.uid <> s
-group by
-	t2.uid
-having
-	count(t2.uid) > 10
-order by
-	count(uid) desc
-limit 
-	1, 3
-# 第2开始显示3个
-```
-
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `窗口函数`
 
 窗口函数的基本语法如下：<窗口函数> over (partition by <用于分组的列名> order by <用于排序的列名>)
@@ -85,6 +54,38 @@ gouryby b.city
 having count>=1000
 ) b
 where b.temp >=10
+```
+
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `with as用法和子句排序`
+
+CTE 语法的with as用法和子句使用的顺序。CTE可以引用自身，和同一个with下已经定义的，但是不能引用后面的避免互相嵌套递归。
+
+```sql
+with 
+	t1 as (
+		select 
+		from
+	)
+	t2 as (
+		select 
+		from t1
+	)
+select
+	t2.uid, count(t2.uid)
+from
+	t2
+where
+	t2.uid <> s
+group by
+	t2.uid
+having
+	count(t2.uid) > 10
+order by
+	count(uid) desc
+limit 
+	1, 3
+# 第2开始显示3个
 ```
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `行转列，列转行函数`
