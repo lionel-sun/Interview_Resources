@@ -6,13 +6,20 @@ set去重，list不去重。concat_ws(',',collect_set(name)) as name_set
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `解析json`
 
+```sql
+select 
+get_json_object('{"name":"zhangsan","age":18}','$.name'),
+get_json_object('{"name":"zhangsan","age":18}','$.age');
+```
+
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `lateral view explode用法`
 
 ```sql
 select good_id,get_json_object(sale_json,'$.monthSales') as monthSales
 from tableName 
 LATERAL VIEW explode(split(goods_id,','))goods as good_id 
-LATERAL VIEW explode(split(regexp_replace(regexp_replace(json_str , '\\[|\\]',''),'\\}\\,\\{','\\}\\;\\{'),'\\;')) sales as sale_json;
+LATERAL VIEW explode(split(regexp_replace(regexp_replace(json_str , '\\[|\\]',''),'\\}\\,\\{','\\}\\;\\{'),'\\;'))
+sales as sale_json;
 
 select 
 b.name
