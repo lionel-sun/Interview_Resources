@@ -10,6 +10,7 @@
 
 ## [Java And Python](https://github.com/lionel-sun/Interview_Resources/blob/master/java_python/README_en.md)
 
+## [sql题总结](https://github.com/lionel-sun/Interview_Resources/tree/master/big_data/sql.md)
 
 # 面试复习准备材料
 
