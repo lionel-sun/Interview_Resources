@@ -1,7 +1,7 @@
 # Data Engineer English
 
 
-## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hive`
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Hive & Batch`
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) ``
 
@@ -17,7 +17,7 @@ Hbase, Graph, ES
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Hbase`
 
-## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Flink`
+## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Flink & Streaming`
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) ``
 
