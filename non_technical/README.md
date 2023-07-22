@@ -45,7 +45,8 @@ I'm excited to have the opportunity to further discuss my experiences and how I 
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `期望薪资`
 
-
+-- 先问下这个岗位薪资范围？
+-- 因为本身工资比较高，衡量新加坡的成本希望可以扣除支出后比中国的收入高。
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `以前和当前工作经历的问题 previous and current work experiences`
 
