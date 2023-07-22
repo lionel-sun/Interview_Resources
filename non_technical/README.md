@@ -47,6 +47,7 @@ I'm excited to have the opportunity to further discuss my experiences and how I 
 
 -- 先问下这个岗位薪资范围？
 -- 因为本身工资比较高，衡量新加坡的成本希望可以扣除支出后比中国的收入高。
+-- 看欧洲的公司会相互比较，德国荷兰意大利收入没有那么高，但是工作会更轻松。瑞士伦敦的其实也有在看，薪资还可以，但是综合考虑也会有其他问题。
 -- 问下晋升和调薪的机制
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `以前和当前工作经历的问题 previous and current work experiences`
