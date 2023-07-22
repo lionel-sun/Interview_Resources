@@ -14,7 +14,29 @@ Beyond my technical expertise, I am a highly motivated and collaborative team pl
 
 I'm excited to have the opportunity to further discuss my experiences and how I can contribute to the agile lab. Thank you for considering my application.
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `个人的优缺点`
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `字节范`
+
+始终创业、多元兼容、坦诚清晰、求真务实、敢为极致、共同成长
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `个人的优缺点，性格特点`
+
+优点：思维活跃，解决思路比较广。
+
+缺点：工作当中不太喜欢社交，有点小社恐。
+
+性格特点，愿意尝试新事物，尽量采用方便的方式完成现有工作，不愿意重复简单耗时的事情。
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `最大的挫折和困难`
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `为啥选tt`
+
+前景好，技术深，2面给我印象很深刻。感觉其他平台提供不了这样的机会。
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `意大利工作经历的问题`
+
+-- 没毕业就开始工作，碰到机会就去了
+-- hw提供的签证转换（合法的）合作方公司签合同，中间换过一次公司（hw公司要求）
+-- 疫情原因没有续签（cnbg需要现场施工），同时也有pdd机会就回来了。
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `以前和当前工作经历的问题 previous and current work experiences`
 
