@@ -2,7 +2,21 @@
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `自我介绍`
 
-爱久
+- excited to introduce
+- master degree in cs from sapienza 
+- more than 2 years italy hw
+- collect clean create data model data dashboard to support pm
+- current in temu which part of pdd, 2 years
+- oct last year i join temu, dw had less 10 people
+- at the beginning, the data domain owner of Supply Chain Logistics
+- recently i am responsible for core dashboard develop
+- which provide decision support for Middle and senior management include ceo and coo
+- it has been an enriching experience.
+- beyond tech experience
+- highly motivated & collaborative team player.
+- contibute my skills & learn from others
+- excited to have oppo to discu my exper and how can i contribute to byd
+- thx you for consider my app
 
 Hi there! My Chinese name is Bojian Sun, my English name is Lionel, and I'm excited to introduce myself. I completed my Master's degree in Computer Science from Sapienza University of Rome. I had the opportunity to work in Italy for two and a half years, where I primarily provided data support for project management.
 
@@ -112,6 +126,15 @@ For me, it's not just about the salary. I also value job satisfaction, growth op
 If I were offered the position, I'd appreciate a notice period of about 1.5 to 2 months. My current job is pretty demanding, and I want to make sure I leave things in good hands. It'll take me around a month to wrap up my responsibilities and hand over any ongoing projects. Plus, I'll need another couple of weeks to pack up and settle down in Italy. So, having 1.5 to 2 months of notice would give me the right amount of time to make a smooth transition and hit the ground running in my new role.
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why are you looking for a new position? `
+
+- temu incredible expreience
+- rapidly expanding, successfully in european and American , cover more 40 countries in world
+- tech competence of my colleagues has been outstanding
+- i ve had oppo to learn a great deal during my time here
+- however, requirement of job led me to consider new oppo
+- work hours have been quite extensive , average clock-in time is 13 hours a day and at least six day a week
+- last year oct and nov 60 days without a day off. its too tired
+- for my health and overall well-being, seeking a new job.
 
 I'm currently working at Temu, and it's been an incredible experience. The company has been rapidly expanding, and we've successfully established a presence in major European and American regions. The technical competence of my colleagues has been outstanding, and I've had the opportunity to learn a great deal during my time here.
 
