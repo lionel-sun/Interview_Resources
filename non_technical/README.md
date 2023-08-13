@@ -64,7 +64,39 @@ I'm excited to have the opportunity to further discuss my experiences and how I 
 -- 看欧洲的公司会相互比较，德国荷兰意大利收入没有那么高，但是工作会更轻松。瑞士伦敦的其实也有在看，薪资还可以，但是综合考虑也会有其他问题。
 -- 问下晋升和调薪的机制
 
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `为啥选择比亚迪，回给这个岗位带来什么`
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `兴趣爱好`
+
+- enjoy a variety of activities
+- playing video games
+- have an interest in watching video
+- I like to keep fit by swimming and playing basketball
+- during long breaks, I spend time with my family to travel, to explore new places.
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `家庭情况`
+
+- an only child in my family
+- just married
+
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `以前和当前工作经历的问题 previous and current work experiences`
+
+### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why are you looking for a new position? `
+
+- temu incredible experience
+- rapidly expanding, successfully in European and America, cover more 40 countries in the world
+- tech competence of my colleagues has been outstanding
+- i ve had oppo to learn a great deal during my time here
+- however, requirement of job led me to consider new oppo
+- work hours have been quite extensive , average clock-in time is 13 hours a day and at least six day a week
+- last year oct and nov 60 days without a day off. its too tired
+- for my health and overall well-being, seeking a new job.
+
+I'm currently working at Temu, and it's been an incredible experience. The company has been rapidly expanding, and we've successfully established a presence in major European and American regions. The technical competence of my colleagues has been outstanding, and I've had the opportunity to learn a great deal during my time here.
+
+However, the requirement of the job has led me to consider new opportunities. At Temu, the work hours have been quite extensive, with an average of 13 hours spent at the office each day, including a one-hour break for lunch and dinner. I typically work six days a week, and there have been instances where I've gone nearly 60 days without a day off. This huge workload has taken a toll on both my physical and mental well-being, leaving me feeling tired, stressed, and struggling with insomnia.
+
+For my health and overall well-being, I'm seeking a healthier work-life balance. I believe that finding a position that allows me to have a more balanced and fulfilling lifestyle is essential. I value the lessons and experiences gained at Temu, but I feel it's time for me to prioritize my own health and seek a more sustainable work environment.
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why did you join and leave your last three positions?`
 
@@ -125,19 +157,4 @@ For me, it's not just about the salary. I also value job satisfaction, growth op
 
 If I were offered the position, I'd appreciate a notice period of about 1.5 to 2 months. My current job is pretty demanding, and I want to make sure I leave things in good hands. It'll take me around a month to wrap up my responsibilities and hand over any ongoing projects. Plus, I'll need another couple of weeks to pack up and settle down in Italy. So, having 1.5 to 2 months of notice would give me the right amount of time to make a smooth transition and hit the ground running in my new role.
 
-### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `Why are you looking for a new position? `
 
-- temu incredible expreience
-- rapidly expanding, successfully in european and American , cover more 40 countries in world
-- tech competence of my colleagues has been outstanding
-- i ve had oppo to learn a great deal during my time here
-- however, requirement of job led me to consider new oppo
-- work hours have been quite extensive , average clock-in time is 13 hours a day and at least six day a week
-- last year oct and nov 60 days without a day off. its too tired
-- for my health and overall well-being, seeking a new job.
-
-I'm currently working at Temu, and it's been an incredible experience. The company has been rapidly expanding, and we've successfully established a presence in major European and American regions. The technical competence of my colleagues has been outstanding, and I've had the opportunity to learn a great deal during my time here.
-
-However, the requirement of the job has led me to consider new opportunities. At Temu, the work hours have been quite extensive, with an average of 13 hours spent at the office each day, including a one-hour break for lunch and dinner. I typically work six days a week, and there have been instances where I've gone nearly 60 days without a day off. This huge workload has taken a toll on both my physical and mental well-being, leaving me feeling tired, stressed, and struggling with insomnia.
-
-For my health and overall well-being, I'm seeking a healthier work-life balance. I believe that finding a position that allows me to have a more balanced and fulfilling lifestyle is essential. I value the lessons and experiences gained at Temu, but I feel it's time for me to prioritize my own health and seek a more sustainable work environment.
