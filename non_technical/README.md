@@ -2,31 +2,33 @@
 
 ## ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `自我介绍`
 
-- excited to introduce
+- over 5 years of experience working across Europe and Asia.
 - master degree in cs from sapienza 
-- more than 2 years italy hw
-- collect clean create data model data dashboard to support pm
-- current in temu which part of pdd, 2 years
-- oct last year i join temu, dw had less 10 people
-- at the beginning, the data domain owner of Supply Chain Logistics
-- recently i am responsible for core dashboard develop
-- which provide decision support for Middle and senior management include ceo and coo
-- it has been an enriching experience.
-- beyond tech experience
-- highly motivated & collaborative team player.
-- contibute my skills & learn from others
-- excited to have oppo to discu my exper and how can i contribute to byd
-- thx you for consider my app
+- large-scale data platforms, real-time processing, multi-center data construction and international data compliance
+- pdd data modeling, data services, dashboards, and a very standardized data warehouse system.
+- supply chain logistics domain
+- built executive-level KPI dashboards like GMV and ROI, helped leadership make data-driven decisions
+- ODS layer and CDM decoupling
+- improving lambda architecture pipelines
+- ensuring data quality
+- revenue interaction data domain
+- building the foundational data models
+- ensuring EU/US/global compliance
+- reusable SOPs for large-scale events like year-end and mid-year festivals
+- onboarding and developing new hires including campus recruits.
+- collaborative enjoy helping newcomers build training plans and grow into their roles
 
-Hi there! My Chinese name is Bojian Sun, my English name is Lionel, and I'm excited to introduce myself. I completed my Master's degree in Computer Science from Sapienza University of Rome. I had the opportunity to work in Italy for two and a half years, where I primarily provided data support for project management.
+Hello, I’m a Data Engineer with over 5 years of experience working across Europe and Asia. I have a Master’s degree in Computer Science from Sapienza University of Rome. My background covers large-scale data platforms, real-time processing, multi-center data construction, and international data compliance.
 
-Currently, I am working at Temu, which is part of the Pinduoduo company, and I have been with them for two years now. In October last year, I joined the Temu project, and it has been an enriching experience. My role at Temu involves various technologies such as Hive, Flink, Kafka, Hadoop, Java, and Python. I have been responsible for developing data reports that provide valuable insights for COO decision-making.
+I started my career in Italy working briefly on digitalization and BI reporting. After returning to China, I joined Pinduoduo’s core data warehouse team, where I worked on data modeling, data services, dashboards, and a very standardized data warehouse system.
 
-Throughout my professional journey, I have developed strong skills in data streaming development, project management, and utilizing cutting-edge technologies. I am passionate about data to drive strategic decision-making and improve operational efficiency.
+Later at Temu, I became the data owner for the supply chain logistics domain—from package creation to final delivery. I built executive-level KPI dashboards like GMV and ROI, helped leadership make data-driven decisions, and led key projects such as ODS layer and CDM decoupling, improving lambda architecture pipelines, ensuring data quality, and handling compliance across multiple regions.
 
-Beyond my technical expertise, I am a highly motivated and collaborative team player. I thrive in dynamic and challenging environments, where I can contribute my skills and learn from others. I believe in continuous learning and staying updated with the latest industry trends.
+Most recently at TikTok, I led the revenue interaction data domain. This covered features like co-hosting, PK, interactive games, and multi-host streaming—basically the main revenue-driving interaction features. I focused on building the foundational data models, improving storage and compute performance, ensuring EU/US/global compliance, and delivering reusable SOPs for large-scale events like year-end and mid-year festivals. I also worked on an internal LLM tool that lets users get automated answers to data questions based on documentation. 
 
-I'm excited to have the opportunity to further discuss my experiences and how I can contribute to the agile lab. Thank you for considering my application.
+At the same time, I was also responsible for onboarding and developing new hires, including campus recruits. I’m very collaborative, and I enjoy helping newcomers build structured training plans and grow into their roles quickly.
+
+Overall, I’m strong in data modeling, big data systems, and working with fast-changing product teams. I enjoy solving complex data problems and building reliable, scalable solutions that support business growth.
 
 ### ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `字节范`
 
